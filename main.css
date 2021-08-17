@@ -884,6 +884,7 @@ body .nav_white_text {
   font-size: 1.1rem;
   letter-spacing: 2px;
   background-color: transparent;
+  cursor: pointer;
 }
 
 body .nav_dark_text {
@@ -929,9 +930,11 @@ body .arrow-up__employment {
   color: #f8f8f8;
   cursor: pointer;
   font-size: 2rem;
-  display: none;
 }
 
+.nav__mobile {
+  display: none;
+}
 /*******************************************************
 
 =====================================
