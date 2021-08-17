@@ -58,30 +58,27 @@ function hideMenuItem(containerID, classItem) {
 }
 
 btnNews.addEventListener("click", () => {
-  navOpen = true;
-  if (navOpen) {
-    showMenuItem(onClick_news, classItem_news);
-    //Click outside the element close the modal
-    window.onclick = function (event) {
-      if (!event.target.matches("#btn__news")) {
-        var dropdowns = document.getElementsByClassName("display__onClick");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-          var openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains("show")) {
-            openDropdown.classList.remove("show");
-            navOpen = false;
-          }
+  hideMenuItem(onClick_about, classItem_about);
+  showMenuItem(onClick_news, classItem_news);
+  //Click outside the element close the modal
+  window.onclick = function (event) {
+    if (!event.target.matches("#btn__news")) {
+      var dropdowns = document.getElementsByClassName("display__onClick");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains("show")) {
+          openDropdown.classList.remove("show");
+          navOpen = false;
         }
       }
-    };
-  }
+    }
+  };
 });
 
 btnAbout.addEventListener("click", () => {
   hideMenuItem(onClick_news, classItem_news);
   showMenuItem(onClick_about, classItem_about);
-
   //Click outside the element close the modal
   window.onclick = function (event) {
     if (!event.target.matches("#btn__about")) {
