@@ -53,6 +53,7 @@ trigger_search.addEventListener("click", () => {
 const btnNews = document.getElementById("btn__news");
 const btnAbout = document.getElementById("btn__about");
 const btnSchools = document.getElementById("btn__schools");
+const btnEmployment = document.getElementById("btn__employment");
 const btn_close = document.getElementById("btn_close");
 
 let navOpen = false;
@@ -60,10 +61,14 @@ let navOpen = false;
 const onClick_news = document.getElementById("display__onClick_news");
 const onClick_about = document.getElementById("display__onClick_about");
 const onClick_schools = document.getElementById("display__onClick_schools");
+const onClick_employment = document.getElementById(
+  "display__onClick_employment"
+);
 
 const classItem_news = "show";
 const classItem_about = "show_about";
 const classItem_schools = "show_schools";
+const classItem_employment = "show_employment";
 
 function showMenuItem(containerID, classItem) {
   console.log(element);
@@ -116,6 +121,29 @@ btnSchools.addEventListener("click", () => {
   hideMenuItem(onClick_about, classItem_about);
   showMenuItem(onClick_schools, classItem_schools);
 });
+
+btnEmployment.addEventListener("click", () => {
+  hideMenuItem(onClick_news, classItem_news);
+  hideMenuItem(onClick_schools, classItem_schools);
+  hideMenuItem(onClick_schools, classItem_schools);
+  showMenuItem(onClick_employment, classItem_employment);
+  //Click outside the element close the modal
+  window.onclick = function (event) {
+    if (!event.target.matches("#btn__employment")) {
+      var dropdowns = document.getElementsByClassName(
+        "display__onClick_employment"
+      );
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains("show_employment")) {
+          openDropdown.classList.remove("show_employment");
+        }
+      }
+    }
+  };
+});
+
 btn_close.addEventListener("click", () => {
   hideMenuItem(onClick_schools, classItem_schools);
 });
