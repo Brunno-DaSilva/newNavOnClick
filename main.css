@@ -126,7 +126,8 @@ body header .navigation .nav .nav__primary-item {
 body header .navigation .nav .nav__primary-item .display__onHover,
 .display__onClick,
 .display__onClick_about,
-.display__onClick_schools {
+.display__onClick_schools,
+.display__onClick_employment {
   position: absolute;
   top: 120%;
   padding: 0.9rem;
@@ -655,7 +656,11 @@ body
   margin-bottom: 1rem;
   text-decoration: none !important;
 }
-
+/*******************************************************
+=====================================
+==>        Employment Section
+=====================================
+*******************************************************/
 body header .navigation .nav .employment {
   list-style-type: none;
   padding: 0.5rem;
