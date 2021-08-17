@@ -40,64 +40,86 @@ trigger_search.addEventListener("click", () => {
  *
  * ****************/
 
-const news = document.getElementById("news");
-const about = document.getElementById("about");
-// const school = document.getElementById("school");
-// const employment = document.getElementById("employment");
+const btnNews = document.getElementById("btn__news");
+const onClick_news = document.getElementById("display__onClick_news");
 
-let display_hide_El_news = document.getElementById("display__onClick_news");
-let display_hide_El_about = document.getElementById("display__onClick_about");
-// let display_hide_El_school = document.getElementById("display__onClick_school");
-// let display_hide_El_employment = document.getElementById(
-//   "display__onClick_employment"
-// );
-
-const lastEl_news = document.getElementById("lastEl_news");
-const lastEl_about = document.getElementById("lastEl_about");
-const lastEl = document.getElementById("lastEl_news");
-// const lastEl = do  cument.getElementById("lastEl_news");
-
-news.addEventListener("click", () => {
-  showNavItems(display_hide_El_news);
-});
-about.addEventListener("click", () => {
-  showNavItems_about(display_hide_El_about);
-});
-
-function showNavItems(x) {
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-    x.style.flexDirection = "column";
-    x.style.minWidth = "20rem";
-    x.style.padding = "0.5rem";
-    x.style.boxShadow = `0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)`;
-  } else {
-    x.style.display = "none";
-  }
+function showMenuItem(containerID) {
+  containerID.classList.toggle("show");
 }
 
-function showNavItems_about(x) {
-  if (x.style.display === "none") {
-    x.style.display = "flex";
-    x.style.flexDirection = "column";
-    x.style.minWidth = "20rem";
-    x.style.padding = "0.5rem";
-    x.style.boxShadow = `0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)`;
-  } else {
-    x.style.display = "none";
-  }
-}
-
-// Last element gets a focus out event
-function focusOut(x) {
-  x.style.display = "none";
-  console.log("Focus out");
-}
-
-lastEl_news.addEventListener("focusout", () => {
-  focusOut(display_hide_El_news);
+btnNews.addEventListener("click", () => {
+  showMenuItem(onClick_news);
+  window.onclick = function (event) {
+    if (!event.target.matches("#btn__news")) {
+      var dropdowns = document.getElementsByClassName("display__onClick");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains("show")) {
+          openDropdown.classList.remove("show");
+        }
+      }
+    }
+  };
 });
 
-lastEl_about.addEventListener("focusout", () => {
-  focusOut(display_hide_El_about);
-});
+// const about = document.getElementById("about");
+// // const school = document.getElementById("school");
+// // const employment = document.getElementById("employment");
+
+// let display_hide_El_news = document.getElementById("display__onClick_news");
+// let display_hide_El_about = document.getElementById("display__onClick_about");
+// // let display_hide_El_school = document.getElementById("display__onClick_school");
+// // let display_hide_El_employment = document.getElementById(
+// //   "display__onClick_employment"
+// // );
+
+// const lastEl_news = document.getElementById("lastEl_news");
+// const lastEl_about = document.getElementById("lastEl_about");
+// const lastEl = document.getElementById("lastEl_news");
+// // const lastEl = do  cument.getElementById("lastEl_news");
+
+// news.addEventListener("click", () => {
+//   showNavItems(display_hide_El_news);
+// });
+// about.addEventListener("click", () => {
+//   showNavItems_about(display_hide_El_about);
+// });
+
+// function showNavItems(x) {
+//   if (x.style.display === "none") {
+//     x.style.display = "flex";
+//     x.style.flexDirection = "column";
+//     x.style.minWidth = "20rem";
+//     x.style.padding = "0.5rem";
+//     x.style.boxShadow = `0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)`;
+//   } else {
+//     x.style.display = "none";
+//   }
+// }
+
+// function showNavItems_about(x) {
+//   if (x.style.display === "none") {
+//     x.style.display = "flex";
+//     x.style.flexDirection = "column";
+//     x.style.minWidth = "20rem";
+//     x.style.padding = "0.5rem";
+//     x.style.boxShadow = `0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)`;
+//   } else {
+//     x.style.display = "none";
+//   }
+// }
+
+// // Last element gets a focus out event
+// function focusOut(x) {
+//   x.style.display = "none";
+//   console.log("Focus out");
+// }
+
+// lastEl_news.addEventListener("focusout", () => {
+//   focusOut(display_hide_El_news);
+// });
+
+// lastEl_about.addEventListener("focusout", () => {
+//   focusOut(display_hide_El_about);
+// });
