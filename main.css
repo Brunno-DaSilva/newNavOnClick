@@ -125,7 +125,8 @@ body header .navigation .nav .nav__primary-item {
 
 body header .navigation .nav .nav__primary-item .display__onHover,
 .display__onClick,
-.display__onClick_about {
+.display__onClick_about,
+.display__onClick_schools {
   position: absolute;
   top: 120%;
   padding: 0.9rem;
@@ -187,6 +188,12 @@ body header .navigation .nav .nav__primary-item:hover .display__onHover a {
   padding: 0.5rem 0;
   text-transform: capitalize;
 }
+
+/*******************************************************
+=====================================
+==>        About Section
+=====================================
+*******************************************************/
 
 body header .navigation .nav .about .show_about {
   position: absolute;
@@ -335,12 +342,17 @@ body
   color: var(--OffWhite) !important;
 }
 
+/*******************************************************
+=====================================
+==>        Schools Section
+=====================================
+*******************************************************/
 body header .navigation .nav .schools {
   list-style-type: none;
   padding: 0.5rem;
   position: relative;
 }
-body header .navigation .nav .schools .school__column {
+/* body header .navigation .nav .schools .display__onClick_schools {
   position: absolute;
   top: 120%;
   padding: 0.9rem;
@@ -349,9 +361,9 @@ body header .navigation .nav .schools .school__column {
   z-index: 999;
   display: none;
   transition: ease-in-out 0.4s;
-}
+} */
 
-body header .navigation .nav .schools:hover .school__column {
+body header .navigation .nav .schools .show_schools {
   position: absolute;
   left: -30rem;
   width: 60rem;
@@ -373,13 +385,29 @@ body header .navigation .nav .schools:hover .school__column {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-body
-  header
-  .navigation
-  .nav
-  .schools:hover
-  .school__column
-  .schooltab__container {
+.show_schools {
+  position: absolute;
+  left: -30rem;
+  width: 60rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+body header .navigation .nav .schools .show_schools .schooltab__container {
   width: 98%;
   min-height: 400px;
   margin: 0 auto;
@@ -936,7 +964,6 @@ body .arrow-up__employment {
   display: none;
 }
 /*******************************************************
-
 =====================================
 ==>        Media Query 
 =====================================

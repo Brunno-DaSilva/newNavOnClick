@@ -1,4 +1,9 @@
-// In Branch School tab
+/*********************************************
+ *
+ * Inner School tab
+ *
+ * ********************************************/
+
 function onTabClick(event) {
   let activeTabs = document.querySelectorAll(".active");
 
@@ -34,20 +39,25 @@ trigger_search.addEventListener("click", () => {
   }
 });
 
-/******************
+/*********************************************
  *
  * On click event to help keyboard only users
  *
- * ****************/
+ * ********************************************/
 
 const btnNews = document.getElementById("btn__news");
 const btnAbout = document.getElementById("btn__about");
+const btnSchools = document.getElementById("btn__schools");
+
 let navOpen = false;
 
 const onClick_news = document.getElementById("display__onClick_news");
 const onClick_about = document.getElementById("display__onClick_about");
+const onClick_schools = document.getElementById("display__onClick_schools");
+
 const classItem_news = "show";
 const classItem_about = "show_about";
+const classItem_schools = "show_schools";
 
 function showMenuItem(containerID, classItem) {
   console.log(element);
@@ -59,6 +69,7 @@ function hideMenuItem(containerID, classItem) {
 
 btnNews.addEventListener("click", () => {
   hideMenuItem(onClick_about, classItem_about);
+  hideMenuItem(onClick_schools, classItem_schools);
   showMenuItem(onClick_news, classItem_news);
   //Click outside the element close the modal
   window.onclick = function (event) {
@@ -69,7 +80,6 @@ btnNews.addEventListener("click", () => {
         var openDropdown = dropdowns[i];
         if (openDropdown.classList.contains("show")) {
           openDropdown.classList.remove("show");
-          navOpen = false;
         }
       }
     }
@@ -78,6 +88,7 @@ btnNews.addEventListener("click", () => {
 
 btnAbout.addEventListener("click", () => {
   hideMenuItem(onClick_news, classItem_news);
+  hideMenuItem(onClick_schools, classItem_schools);
   showMenuItem(onClick_about, classItem_about);
   //Click outside the element close the modal
   window.onclick = function (event) {
@@ -88,6 +99,27 @@ btnAbout.addEventListener("click", () => {
         var openDropdown = dropdowns[i];
         if (openDropdown.classList.contains("show_about")) {
           openDropdown.classList.remove("show_about");
+        }
+      }
+    }
+  };
+});
+
+btnSchools.addEventListener("click", () => {
+  hideMenuItem(onClick_news, classItem_news);
+  hideMenuItem(onClick_about, classItem_about);
+  showMenuItem(onClick_schools, classItem_schools);
+
+  window.onclick = function (event) {
+    if (!event.target.matches("#btn__schools")) {
+      var dropdowns = document.getElementsByClassName(
+        "display__onClick_schools"
+      );
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains("show_schools")) {
+          openDropdown.classList.remove("show_schools");
         }
       }
     }
