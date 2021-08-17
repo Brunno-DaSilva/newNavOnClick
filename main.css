@@ -1,0 +1,1111 @@
+/******************************************************
+TODOs
+
+[ x ] Make School items display the yellow underline on hover
+[ x ] Add icon images
+[ ] Responsible Design
+[ ] Make search form work properly  
+[ ] onClick get rid of hover 
+
+******************************************************/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+
+:root {
+  --dark-blue: #184366;
+  --light-green: #0e987d;
+  --light-blue: #5ab3c4;
+  --yellow: #e8b20f;
+  --orange: #e95b37;
+  --OffWhite: #f8f8f8;
+}
+
+*,
+*::before,
+*::after {
+  border: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  width: 100vw;
+  position: relative;
+  /*================================
+= Navigation Style Starts Here
+= BEM - Methodology 
+================================*/
+}
+
+body header {
+  position: fixed;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: var(--dark-blue);
+  border-bottom: 2px solid var(--yellow);
+  -webkit-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3),
+    0 15px 12px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  /*================================
+    // Nav semantic tag 
+    // that holds all navigation items
+    // Parent must have a fix unity 
+    // so nav becomes 75% of it
+    ================================*/
+}
+
+body header .navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 75%;
+  background: var(--dark-blue);
+  padding: 1.1rem 0.5rem;
+  border: 1px solid rgb(65, 255, 106);
+}
+
+body header .navigation .logo {
+  width: 230px;
+}
+
+body header .navigation .logo img {
+  width: 90%;
+  height: auto;
+}
+
+body header .navigation .nav {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+body header .navigation .nav .nav__primary-item {
+  list-style-type: none;
+  padding: 0.5rem;
+  position: relative;
+}
+
+body header .navigation .nav .nav__primary-item .display__onHover {
+  position: absolute;
+  top: 120%;
+  padding: 0.9rem;
+  background-color: var(--OffWhite);
+  border-radius: 0.25rem;
+  z-index: 999;
+  display: none;
+  -webkit-transition: ease-in-out 0.4s;
+  transition: ease-in-out 0.4s;
+}
+
+body header .navigation .nav .nav__primary-item:hover .display__onHover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  min-width: 20rem;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+body header .navigation .nav .nav__primary-item .display__onClick {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  min-width: 20rem;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+body header .navigation .nav .nav__primary-item:hover .display__onHover a {
+  color: var(--dark-blue) !important;
+  padding: 0.5rem 0;
+  text-transform: capitalize;
+}
+
+body header .navigation .nav .about {
+  list-style-type: none;
+  padding: 0.5rem;
+  position: relative;
+}
+
+body header .navigation .nav .about .about__column {
+  position: absolute;
+  top: 120%;
+  padding: 0.9rem;
+  background-color: var(--OffWhite);
+  border-radius: 0.25rem;
+  z-index: 999;
+  display: none;
+  -webkit-transition: ease-in-out 0.4s;
+  transition: ease-in-out 0.4s;
+}
+
+body header .navigation .nav .about .about__column .button {
+  display: inline-block;
+  margin: 0.3em;
+  padding: 2rem 3rem;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 3px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  border: none;
+  font-size: 15px;
+  text-align: center;
+  color: var(--dark-blue);
+}
+
+body header .navigation .nav .about .about__column .button:hover {
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+body header .navigation .nav .about .about__column .button__orange {
+  background-color: var(--orange);
+  color: var(--OffWhite) !important;
+}
+
+body header .navigation .nav .about .about__column .button__yellow {
+  background-color: var(--yellow);
+}
+
+body header .navigation .nav .about .about__column .button__light_green {
+  background-color: var(--light-green);
+}
+
+body header .navigation .nav .about .about__column .button__light_blue {
+  background-color: var(--light-blue);
+}
+
+body header .navigation .nav .about:hover .about__column {
+  position: absolute;
+  left: -10rem;
+  width: 60rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+body header .navigation .nav .about:hover .about__column .about__column_left,
+body header .navigation .nav .about:hover .about__column .about__column_middle {
+  width: 39%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+body header .navigation .nav .about:hover .about__column a {
+  color: var(--dark-blue) !important;
+  text-transform: capitalize;
+  padding: 0.5rem 0;
+  position: relative;
+  -webkit-transition: ease-in-out 0.4s;
+  transition: ease-in-out 0.4s;
+}
+
+body header .navigation .nav .about:hover .about__column .about__column_right {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+body
+  header
+  .navigation
+  .nav
+  .about:hover
+  .about__column
+  .about__column_right
+  .button__light_green,
+body
+  header
+  .navigation
+  .nav
+  .about:hover
+  .about__column
+  .about__column_right
+  .button__light_blue,
+body
+  header
+  .navigation
+  .nav
+  .about:hover
+  .about__column
+  .about__column_right
+  .button__orange,
+body
+  header
+  .navigation
+  .nav
+  .about:hover
+  .about__column
+  .about__column_right
+  .button__yellow {
+  text-transform: uppercase;
+  color: var(--OffWhite) !important;
+}
+
+body header .navigation .nav .schools {
+  list-style-type: none;
+  padding: 0.5rem;
+  position: relative;
+}
+body header .navigation .nav .schools .school__column {
+  position: absolute;
+  top: 120%;
+  padding: 0.9rem;
+  background-color: var(--OffWhite);
+  border-radius: 0.25rem;
+  z-index: 999;
+  display: none;
+  transition: ease-in-out 0.4s;
+}
+
+body header .navigation .nav .schools:hover .school__column {
+  position: absolute;
+  left: -30rem;
+  width: 60rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+body
+  header
+  .navigation
+  .nav
+  .schools:hover
+  .school__column
+  .schooltab__container {
+  width: 98%;
+  min-height: 400px;
+  margin: 0 auto;
+  background-color: var(--OffWhite);
+  color: var(--dark-blue) !important;
+}
+body
+  header
+  .navigation
+  .nav
+  .schools:hover
+  .school__column
+  .schooltab__container
+  p {
+  list-style: none;
+  display: inline-flex;
+}
+body
+  header
+  .navigation
+  .nav
+  .schools:hover
+  .school__column
+  .schooltab__container
+  p
+  a {
+  text-decoration: none;
+  color: var(--dark-blue) !important;
+  padding: 0.4rem;
+  transition: all 0.3s ease-in-out;
+  border-bottom: 1px solid transparent;
+}
+body
+  header
+  .navigation
+  .nav
+  .schools:hover
+  .school__column
+  .schooltab__container
+  #nav-tab
+  p {
+  margin-left: 2rem !important;
+}
+
+body
+  header
+  .navigation
+  .nav
+  .schools:hover
+  .school__column
+  .schooltab__container
+  #nav-tab
+  a {
+  color: #5b5f66 !important;
+  font-size: 1.3rem;
+}
+
+body
+  header
+  .navigation
+  .nav
+  .schools:hover
+  .school__column
+  .schooltab__container
+  #nav-tab
+  .active
+  a {
+  transition: all 0.3s ease-in-out;
+  color: var(--dark-blue) !important;
+  font-weight: 600;
+  border-bottom: 3px solid var(--yellow);
+}
+
+body
+  header
+  .navigation
+  .nav
+  .schools:hover
+  .school__column
+  .schooltab__container
+  .tab-pane {
+  display: none;
+}
+body
+  header
+  .navigation
+  .nav
+  .schools:hover
+  .school__column
+  .schooltab__container
+  .tab-pane.active {
+  display: block;
+}
+
+/********** TODO: *************
+  [ X ] Add high, middle,
+  and program centers following 
+  from body to the container name  
+  "body
+  header
+  .navigation
+  .nav
+  .schools:hover
+  .school__column
+  .schooltab__container + .elementary__container"
+**********************************/
+body
+  header
+  .navigation
+  .nav
+  .schools:hover
+  .school__column
+  .schooltab__container
+  .elementary__container,
+body
+  header
+  .navigation
+  .nav
+  .schools:hover
+  .school__column
+  .schooltab__container
+  .middle__container,
+body
+  header
+  .navigation
+  .nav
+  .schools:hover
+  .school__column
+  .schooltab__container
+  .high__container,
+body
+  header
+  .navigation
+  .nav
+  .schools:hover
+  .school__column
+  .schooltab__container
+  .program_centers__container {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* body
+  header
+  .navigation
+  .nav
+  .schools:hover
+  .school__column
+  .schooltab__container
+  .program_centers {
+  flex-direction: row;
+  justify-content: space-between;
+} */
+
+/********** TODO: *************
+  [ X ] Add high, middle,
+  and program centers following 
+  from body to the container name  
+  "body
+  header
+  .navigation
+  .nav
+  .schools:hover
+  .school__column
+  .schooltab__container + .elementary__container
+  .schools__elementary_item "
+**********************************/
+body
+  header
+  .navigation
+  .nav
+  .schools:hover
+  .school__column
+  .schooltab__container
+  .elementary__container
+  .schools__elementary_item,
+body
+  header
+  .navigation
+  .nav
+  .schools:hover
+  .school__column
+  .schooltab__container
+  .middle__container
+  .schools__middle_item,
+body
+  header
+  .navigation
+  .nav
+  .schools:hover
+  .school__column
+  .schooltab__container
+  .high__container
+  .schools__high_item,
+body
+  header
+  .navigation
+  .nav
+  .schools:hover
+  .school__column
+  .schooltab__container
+  .program_centers__container
+  .schools__program_centers_item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 300px;
+  padding: 0.2rem;
+  margin: 0.3rem;
+  text-decoration: none;
+}
+
+body
+  header
+  .navigation
+  .nav
+  .schools:hover
+  .school__column
+  .schooltab__container
+  .high__container
+  .schools__high_item {
+  justify-content: flex-start;
+}
+body
+  header
+  .navigation
+  .nav
+  .schools:hover
+  .school__column
+  .schooltab__container
+  .high__container
+  .schools__high_item
+  p {
+  padding: 0.5rem 0;
+}
+
+body
+  header
+  .navigation
+  .nav
+  .schools:hover
+  .school__column
+  .schooltab__container
+  .elementary__container
+  .schools__elementary_item
+  a {
+  margin-bottom: 1rem;
+  text-decoration: none !important;
+}
+
+body header .navigation .nav .employment {
+  list-style-type: none;
+  padding: 0.5rem;
+  position: relative;
+}
+
+body header .navigation .nav .employment .employment__column {
+  position: absolute;
+  top: 120%;
+  padding: 0.9rem;
+  border-radius: 0.25rem;
+  z-index: 999;
+  display: none;
+  -webkit-transition: ease-in-out 0.4s;
+  transition: ease-in-out 0.4s;
+}
+
+body header .navigation .nav .employment:hover .employment__column {
+  position: absolute;
+  left: -35rem;
+  width: 69rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+body
+  header
+  .navigation
+  .nav
+  .employment:hover
+  .employment__column
+  .employment__column_one,
+body
+  header
+  .navigation
+  .nav
+  .employment:hover
+  .employment__column
+  .employment__column_two,
+body
+  header
+  .navigation
+  .nav
+  .employment:hover
+  .employment__column
+  .employment__column_three,
+body
+  header
+  .navigation
+  .nav
+  .employment:hover
+  .employment__column
+  .employment__column_four {
+  width: 20%;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+body
+  header
+  .navigation
+  .nav
+  .employment:hover
+  .employment__column
+  .employment__column_two {
+  width: 30%;
+}
+
+body
+  header
+  .navigation
+  .nav
+  .employment:hover
+  .employment__column
+  .employment__column_four {
+  -webkit-box-flex: 1;
+  -ms-flex: auto;
+  flex: auto;
+}
+
+body header .navigation .nav .employment:hover .employment__column a {
+  color: var(--dark-blue) !important;
+  text-transform: capitalize;
+  padding: 0.5rem 0;
+  position: relative;
+  -webkit-transition: ease-in-out 0.4s;
+  transition: ease-in-out 0.4s;
+}
+
+body header .navigation .icons {
+  width: 18%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  color: var(--yellow);
+  position: relative;
+}
+
+/**************
+* Icon Search
+**************/
+
+body header .navigation .icons .icons__search {
+  display: flex;
+  padding: 0 !important;
+}
+body header .navigation .icons .icons__search a {
+  padding: 0;
+}
+body header .navigation .icons .icons__search a i {
+  padding: 0;
+}
+
+body header .navigation .icons .icons__search .trigger_search {
+  background: transparent;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  outline: 0;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+body header .navigation .icons .icons__search .trigger_search:hover {
+  color: var(--yellow);
+}
+
+body header .navigation .icons .icons__search .input {
+  border-radius: 20px;
+  border: 0;
+  outline: 0;
+  transition: 0.25s ease-in-out all;
+  width: 0;
+  padding: 0;
+  margin-right: -25px;
+  height: 40px;
+}
+
+body header .navigation .icons .input-open {
+  width: 62vw !important;
+  padding: 0 50px !important;
+  margin-right: 10px !important;
+  color: #1e5583;
+  font-size: 1rem;
+}
+
+body header .navigation .icons .input-open::placeholder {
+  color: #858484;
+  font-size: 1rem;
+}
+
+body header .navigation .icons .icons__search a {
+  padding: 0 1rem;
+  color: var(--OffWhite);
+  font-size: 1.2rem;
+  -webkit-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
+  border: 0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  outline: 0;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0 3px;
+}
+
+body header .navigation .icons .icons__search a:hover {
+  color: var(--light-blue);
+}
+
+body .animation__underline {
+  position: relative;
+  -webkit-transition: ease-in-out 0.4s;
+  transition: ease-in-out 0.4s;
+}
+
+body .animation__underline:hover {
+  cursor: pointer;
+}
+
+body .animation__underline:after {
+  background: none repeat scroll 0 0 transparent;
+  top: 100%;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 3px;
+  border-radius: 0.5rem;
+  left: 50%;
+  position: absolute;
+  background: var(--yellow);
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+  z-index: 99;
+}
+
+body .animation__underline:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+body .padding-bottom {
+  padding-bottom: 0.7rem;
+}
+
+body .nav_white_text {
+  color: var(--OffWhite);
+  text-decoration: none !important;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  background-color: transparent;
+}
+
+body .nav_dark_text {
+  color: var(--dark-blue);
+  text-decoration: none !important;
+  font-size: 1rem;
+  font-weight: bolder;
+  letter-spacing: 1px;
+}
+
+body .arrow-up,
+body .arrow-up__news,
+body .arrow-up__about,
+body .arrow-up__employment {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid var(--OffWhite);
+  position: absolute;
+  left: 54%;
+  top: -2%;
+}
+
+body .arrow-up__news {
+  left: 3%;
+  top: -7.5%;
+}
+body .arrow-up__about {
+  left: 19.5%;
+  top: -4%;
+}
+body .arrow-up__employment {
+  left: 55.5%;
+  top: -7.5%;
+}
+
+/*Hamburger*/
+
+.hamburger {
+  background-color: transparent;
+  border: 0;
+  color: #f8f8f8;
+  cursor: pointer;
+  font-size: 2rem;
+  display: none;
+}
+
+/*******************************************************
+
+=====================================
+==>        Media Query 
+=====================================
+*******************************************************/
+
+/*
+=====================================
+==>        Max-Width: 1605px
+=====================================
+*/
+
+body .md-screen,
+body .sm-screen {
+  display: none;
+}
+
+@media (max-width: 1914px) {
+  body {
+    background-color: #98960e;
+  }
+
+  body header .navigation {
+    width: 80%;
+  }
+
+  body header .navigation .logo {
+    width: 230px;
+  }
+
+  body header .navigation .nav {
+    margin-left: -4rem;
+  }
+
+  body header .navigation .icons .input-open {
+    width: 65vw !important;
+  }
+}
+
+@media (max-width: 1449px) {
+  body {
+    background-color: #980e0e;
+  }
+  body header .navigation {
+    width: 85%;
+  }
+  body header .navigation {
+    justify-content: space-between;
+  }
+
+  body header .navigation .logo {
+    width: 120px;
+  }
+  body header .navigation .nav {
+    margin-left: -5rem;
+  }
+
+  body .lg-screen {
+    display: none;
+  }
+  body .md-screen {
+    display: block;
+  }
+
+  body header .navigation .icons .input-open {
+    width: 68.5vw !important;
+  }
+  body .icons .icons__search {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  body .icons .icons__search a {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  body .icons .icons__search a i {
+    font-size: 1rem;
+  }
+
+  body header .navigation .nav .employment:hover .employment__column {
+    left: -35rem;
+    width: 60rem;
+  }
+}
+
+@media (max-width: 1284px) {
+  body {
+    background-color: #5f837c;
+  }
+
+  body header .navigation {
+    justify-content: space-between;
+    width: 90% !important;
+  }
+  body header .navigation .nav {
+    margin-left: -5rem;
+  }
+  body header .navigation .icons .input-open {
+    width: 70vw !important;
+  }
+
+  body .arrow-up__employment {
+    left: 64.5%;
+    top: -7.5%;
+  }
+}
+
+@media (max-width: 1157px) {
+  body {
+    background-color: #2e54ff;
+  }
+  body header .navigation {
+    width: 95% !important;
+    justify-content: space-between;
+  }
+  body header .navigation .logo {
+    min-width: 80px;
+    max-width: 80px;
+    border: 1px solid red;
+  }
+  body .md-screen {
+    display: none;
+  }
+  body .lg-screen {
+    display: none;
+  }
+  body .sm-screen {
+    display: block;
+  }
+  body header .navigation .nav {
+    margin-left: -1rem !important;
+    border: 1px solid red;
+  }
+  body header .navigation .icons .input-open {
+    width: 91vw !important;
+  }
+
+  .icons {
+    width: 40px !important;
+    border: 1px solid red;
+  }
+  .sm_hide {
+    display: none !important;
+  }
+}
+
+@media (max-width: 900px) {
+  body {
+    background-color: #ab2eff;
+  }
+
+  .nav,
+  .icons {
+    width: 0 !important;
+    display: none !important;
+  }
+
+  body .lg-screen {
+    display: block;
+  }
+  body .sm-screen {
+    display: none;
+  }
+  body header .navigation .logo {
+    min-width: 200px;
+    max-width: 200px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}

@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frisco ISD Navigation</title>
+
+    <!--Main CSS-->
+
+    <link rel="stylesheet" href="./main.css" />
+    <!-- <link rel="stylesheet" href="./CSS/monsters.css" />
+    <link rel="stylesheet" href="./CSS/animations.css" /> -->
+
+    <!--FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+      <nav
+        aria-label="Main Navigation Dropdown"
+        class="navigation"
+        role="navigation"
+      >
+        <div class="logo">
+          <a class="lg-screen" href="https://www.friscoisd.org/"
+            ><img src="./img/fisd-logo-white-rgb.svg" alt="Frisco ISD logo"
+          /></a>
+          <a class="md-screen" href="https://www.friscoisd.org/"
+            ><img src="./img/Fsun FISD.svg" alt="Frisco ISD logo"
+          /></a>
+          <a class="sm-screen" href="https://www.friscoisd.org/"
+            ><img src="./img/Fsun.svg" alt="Frisco ISD logo"
+          /></a>
+        </div>
+        <div class="nav__mobile">
+          <button class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <ul class="nav">
+          <!-- NEWS -->
+          <li class="nav__primary-item">
+            <button type="button" id="news" class="nav_white_text">NEWS</button>
+            <div
+              id="display__onClick_news"
+              class="display__onHover animated fadeIn"
+            >
+              <div class="arrow-up arrow-up__news"></div>
+
+              <a
+                tabindex="0"
+                href="https://www.friscoisd.org/news"
+                class="animation__underline nav_dark_text"
+                >District News</a
+              >
+              <a
+                tabindex="0"
+                href="https://www.friscoisd.org/news"
+                class="animation__underline nav_dark_text"
+                >Inside Frisco ISD</a
+              >
+              <a
+                tabindex="0"
+                href="https://www.friscoisd.org/departments/communications/connect-with-us"
+                class="animation__underline nav_dark_text"
+                >Connect With Frisco ISD</a
+              >
+              <a
+                id="lastEl_news"
+                tabindex="0"
+                href="https://www.friscoisdsports.com/news"
+                class="animation__underline nav_dark_text"
+                >Frisco ISD Athletics News</a
+              >
+            </div>
+          </li>
+          <!-- ABOUT -->
+
+          <li class="nav__primary-item about">
+            <button type="button" id="about" class="nav_white_text">
+              ABOUT
+            </button>
+            <div
+              id="display__onClick_about"
+              class="about__column animated fadeIn"
+            >
+              <div class="arrow-up arrow-up__about"></div>
+
+              <div class="about__column_left animated fadeIn">
+                <a
+                  href="https://www.friscoisd.org/about/board-of-trustees/"
+                  class="animation__underline nav_dark_text"
+                  >Board of Trustees</a
+                >
+                <a
+                  href="https://www.friscoisd.org/about/bond-programs"
+                  class="animation__underline nav_dark_text"
+                  >Bond Programs</a
+                >
+                <a
+                  href="https://www.friscoisd.org/about/resources-and-information/school-calendars"
+                  class="animation__underline nav_dark_text"
+                  >Calendars</a
+                >
+                <a
+                  href="https://www.friscoisd.org/departments/communications/community-folder/elementary-community-folder"
+                  class="animation__underline nav_dark_text"
+                  >Community Folder</a
+                >
+                <a
+                  href="https://www.friscoisd.org/about/district-leadership/leaders"
+                  class="animation__underline nav_dark_text"
+                  >District Leadership</a
+                >
+                <a
+                  href="https://www.friscoisd.org/departments/district-of-innovation/home"
+                  class="animation__underline nav_dark_text"
+                  >District of Innovation</a
+                >
+                <a
+                  href="https://www.friscoisd.org/about/district-overview/home"
+                  class="animation__underline nav_dark_text"
+                  >District Overview</a
+                >
+                <a
+                  href="https://www.friscoisd.org/about/district-overview/mission-vision-beliefs"
+                  class="animation__underline nav_dark_text"
+                  >Mission, Vision & Beliefs</a
+                >
+              </div>
+              <div class="about__column_middle animated fadeIn">
+                <a
+                  href="https://www.friscoisd.org/about/early-history/early-history"
+                  class="animation__underline nav_dark_text"
+                  >Early History</a
+                >
+                <a
+                  href="https://www.friscoisd.org/about/enrollment"
+                  class="animation__underline nav_dark_text"
+                  >Enrollment</a
+                >
+                <a
+                  href="https://www.friscoisd.org/about/district-facility-map"
+                  class="animation__underline nav_dark_text"
+                  >Facility Map</a
+                >
+                <a
+                  href="https://www.friscoisd.org/departments/finance/financial-transparency"
+                  class="animation__underline nav_dark_text"
+                  >Financial Transparency</a
+                >
+                <a
+                  href="https://www.friscoisd.org/about/government-affairs"
+                  class="animation__underline nav_dark_text"
+                  >Government Affairs</a
+                >
+                <a
+                  href="https://www.friscoisd.org/about/new-to-frisco-isd"
+                  class="animation__underline nav_dark_text"
+                  >New to Frisco ISD</a
+                >
+                <a
+                  href="https://www.friscoisd.org/about/resources-and-information/open-records-requests"
+                  class="animation__underline nav_dark_text"
+                  >Public Information Requests</a
+                >
+                <a
+                  href="https://www.friscoisd.org/about/resources-and-information/staff-email-search"
+                  class="animation__underline nav_dark_text"
+                  >Staff Email Search</a
+                >
+                <a
+                  href="https://www.friscoisd.org/about/strategic-planning/home"
+                  class="animation__underline nav_dark_text"
+                  >Strategic Planning</a
+                >
+              </div>
+              <!-- Buttons -->
+              <div
+                id="about__column_right"
+                class="about__column_right animated fadeIn"
+              >
+                <a
+                  href="https://www.friscoisd.org/parents"
+                  class="button button__light_green nav_white_text"
+                  >Parents</a
+                >
+                <a
+                  href="https://www.friscoisd.org/students"
+                  class="button button__yellow nav_white_text"
+                  >Students</a
+                >
+                <a
+                  href="https://www.friscoisd.org/community/community"
+                  class="button button__orange nav_white_text"
+                  >Community</a
+                >
+                <a
+                  id="lastEl_about"
+                  href="https://portal.friscoisd.org/LoginPolicy.jsp"
+                  class="button button__light_blue nav_white_text"
+                  >Staff</a
+                >
+              </div>
+            </div>
+          </li>
+          <!-- DEPARTMENTS -->
+          <li class="nav__primary-item animation__underline">
+            <button type="button" class="nav_white_text">
+              <a
+                class="nav_white_text"
+                href="https://www.friscoisd.org/departments"
+              >
+                DEPARTMENTS
+              </a>
+            </button>
+          </li>
+
+          <!-- SCHOOLS -->
+          <li id="schools" class="nav__primary-item schools">
+            <button class="nav_white_text">SCHOOLS</button>
+            <div class="school__column">
+              <div class="arrow-up"></div>
+
+              <div class="schooltab__container">
+                <!-- Tabs -->
+                <div id="nav-tab">
+                  <p class="active">
+                    <a href="#elementary">Elementary</a>
+                  </p>
+                  <p>
+                    <a class="animation__underline" href="#middle">Middle</a>
+                  </p>
+                  <p><a class="animation__underline" href="#high">High</a></p>
+                  <p>
+                    <a class="animation__underline" href="#program_centers"
+                      >Program Centers</a
+                    >
+                  </p>
+                </div>
+                <!-- Content -->
+                <div class="tab-content">
+                  <!-- elementary -->
+                  <div class="tab-pane active" id="elementary">
+                    <div class="elementary__container">
+                      <!-- COL-ONE -->
+                      <div class="schools__elementary_item">
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/allen"
+                            >Allen Elementary</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/anderson"
+                            >Anderson Elementary</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/ashley"
+                            >Ashley Elementary</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/bledsoe"
+                            >Bledsoe Elementary</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/boals"
+                            >Boals Elementary</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/borchardt"
+                            >Borchardt Elementary</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/bright"
+                            >Bright Academy</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/carroll"
+                            >Carroll Elementary</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/christie"
+                            >Christie Elementary</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/comstock"
+                            >Comstock Elementary</a
+                          >
+                        </p>
+                      </div>
+
+                      <!-- COL-TWO -->
+                      <div class="schools__elementary_item">
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/corbell"
+                            >Corbell Elementary</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/curtsinger"
+                            >Curtsinger Elementary</a
+                          >
+                        </p>
+
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/elliott"
+                            >Elliott Elementary</a
+                          >
+                        </p>
+
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/fisher"
+                            >Fisher Elementary</a
+                          >
+                        </p>
+
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/gunstream"
+                            >Gunstream Elementary</a
+                          >
+                        </p>
+
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/hosp"
+                            >Hosp Elementary</a
+                          >
+                        </p>
+
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/isbell"
+                            >Isbell Elementary</a
+                          >
+                        </p>
+
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/liscano"
+                            >Liscano Elementary</a
+                          >
+                        </p>
+
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/mcspedden"
+                            >McSpedden Elementary</a
+                          >
+                        </p>
+
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/miller"
+                            >Miller Elementary
+                          </a>
+                        </p>
+
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/mooneyham"
+                            >Mooneyham Elementary</a
+                          >
+                        </p>
+                      </div>
+
+                      <!-- COL-THREE -->
+                      <div class="schools__elementary_item">
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/newman"
+                            >Newman Elementary</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/nichols"
+                            >Nichols Elementary</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/norris"
+                            >Norris Elementary</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/ogle"
+                            >Ogle Elementary</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/phillips"
+                            >Phillips Elementary</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/pink"
+                            >Pink Elementary</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/purefoy"
+                            >Purefoy Elementary</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/riddle"
+                            >Riddle Elementary</a
+                          >
+                        </p>
+
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/robertson"
+                            >Robertson Elementary</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/rogers"
+                            >Rogers Elementary</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/sem"
+                            >Sem Elementary</a
+                          >
+                        </p>
+                      </div>
+
+                      <!-- COL-FOUR  -->
+                      <div class="schools__elementary_item">
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/scott"
+                            >Scott Elementary</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/shawneetrail"
+                            >Shawnee Trail Elementary</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/smith"
+                            >Smith Elementary</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/sonntag"
+                            >Sonntag Elementary</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/sparks"
+                            >Sparks Elementary</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/spears"
+                            >Spears Elementary</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/tadlock"
+                            >Tadlock Elementary</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/talley"
+                            >Talley Elementary</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/taylor"
+                            >Taylor Elementary</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/vaughn"
+                            >Vaughn Elementary</a
+                          >
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- middle -->
+                  <div class="tab-pane" id="middle">
+                    <div class="middle__container">
+                      <!-- COL-ONE  -->
+                      <div class="schools__middle_item">
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/clark"
+                            >Clark Middle School</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/cobb"
+                            >Cobb Middle School</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/fowler"
+                            >Fowler Middle School</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/griffin"
+                            >Griffin Middle School</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/hunt"
+                            >Hunt Middle School</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/lawler"
+                            >Lawler Middle School</a
+                          >
+                        </p>
+                      </div>
+
+                      <!-- COL-TWO  -->
+                      <div class="schools__middle_item">
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/maus"
+                            >Maus Middle School</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/nelson"
+                            >Nelson Middle School</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/pearson"
+                            >Pearson Middle School</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/pioneer"
+                            >Pioneer Heritage Middle School</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/roach"
+                            >Roach Middle School</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/scoggins"
+                            >Scoggins Middle School</a
+                          >
+                        </p>
+                      </div>
+
+                      <!-- COL-THREE  -->
+                      <div class="schools__middle_item">
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/stafford"
+                            >Stafford Middle School</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/staley"
+                            >Staley Middle School</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/trent"
+                            >Trent Middle School</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/vandeventer"
+                            >Vandeventer Middle School</a
+                          >
+                        </p>
+
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/wester"
+                            >Wester Middle School</a
+                          >
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- high -->
+                  <div class="tab-pane" id="high">
+                    <div class="high__container">
+                      <!-- COL-ONE  -->
+                      <div class="schools__high_item">
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/centennial"
+                            >Centennial High School</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/emerson"
+                            >Emerson High School</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/friscohigh"
+                            >Frisco High School</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/heritage"
+                            >Heritage High School</a
+                          >
+                        </p>
+                      </div>
+
+                      <!-- COL-TWO  -->
+                      <div class="schools__high_item">
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/independence"
+                            >Independence High School</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/lebanontrail"
+                            >Lebanon Trail High School</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/liberty"
+                            >Liberty High School</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/lonestar"
+                            >Lone Star High School</a
+                          >
+                        </p>
+                      </div>
+                      <!-- COL-THREE  -->
+                      <div class="schools__high_item">
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/memorial"
+                            >Memorial High School</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/reedy"
+                            >Reedy High School</a
+                          >
+                        </p>
+                        <p>
+                          <a
+                            class="nav_dark_text animation__underline"
+                            href="http://schools.friscoisd.org/wakeland"
+                            >Wakeland High School</a
+                          >
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- program_centers -->
+                  <div class="tab-pane" id="program_centers">
+                    <div class="program_centers__container">
+                      <!-- COL-ONE  -->
+                      <div class="schools__program_centers_item">
+                        <a
+                          class="nav_dark_text animation__underline"
+                          href="http://schools.friscoisd.org/cte"
+                          >Career &amp; Technical Education Center</a
+                        >
+                      </div>
+                      <!-- COL-TWO  -->
+                      <div class="schools__program_centers_item">
+                        <a
+                          class="nav_dark_text animation__underline"
+                          href="http://schools.friscoisd.org/ecs"
+                          >Early Childhood School</a
+                        >
+                      </div>
+
+                      <!-- COL-THREE  -->
+                      <div class="schools__program_centers_item">
+                        <a
+                          class="nav_dark_text animation__underline"
+                          href="http://schools.friscoisd.org/soc"
+                          >Student Opportunity Center</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- EMPLOYMENT  -->
+          <li class="nav__primary-item employment">
+            <button type="button" class="nav_white_text" href="#">
+              EMPLOYMENT
+            </button>
+            <div class="employment__column display__onHover animated fadeIn">
+              <div class="arrow-up arrow-up__employment"></div>
+
+              <!-- COL-ONE   -->
+              <div class="employment__column_one">
+                <a
+                  class="animation__underline nav_dark_text"
+                  href="https://www.friscoisd.org/employment"
+                  >Employment Home</a
+                >
+                <a
+                  class="animation__underline nav_dark_text"
+                  href="https://www.friscoisd.org/employment/current-openings"
+                  >Job Openings</a
+                >
+                <a
+                  class="animation__underline nav_dark_text"
+                  href="https://www.friscoisd.org/employment/new-hires"
+                  >New Hires</a
+                >
+              </div>
+
+              <!-- COL-TWO   -->
+              <div class="employment__column_two">
+                <a
+                  class="animation__underline nav_dark_text"
+                  href="https://www.friscoisd.org/employment/application-for-professional-teachers-and-staff"
+                  >Teachers &amp; Staff</a
+                >
+
+                <a
+                  class="animation__underline nav_dark_text"
+                  href="https://www.friscoisd.org/employment/operations-clerical-and-paraprofessional-positions"
+                  >Paraprofessionals &amp; Auxiliary Employees</a
+                >
+              </div>
+
+              <!-- COL-THREE   -->
+              <div class="employment__column_three">
+                <a
+                  class="animation__underline nav_dark_text"
+                  href="https://www.friscoisd.org/employment/substitutes"
+                  >Substitutes</a
+                >
+
+                <a
+                  class="animation__underline nav_dark_text"
+                  href="https://www.friscoisd.org/employment/student-observers"
+                  >Student Observers</a
+                >
+
+                <a
+                  class="animation__underline nav_dark_text"
+                  href="https://www.friscoisd.org/employment/student-teachers"
+                  >Student Teachers</a
+                >
+              </div>
+
+              <!-- COL-FOUR   -->
+              <div class="employment__column_four">
+                <a
+                  class="animation__underline nav_dark_text"
+                  href="https://www.friscoisd.org/employment/employee-resources"
+                  >Employee Resources</a
+                >
+
+                <a
+                  class="animation__underline nav_dark_text"
+                  href="https://www.friscoisd.org/employment/employment-faq"
+                  >Frequently Asked Questions</a
+                >
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <!-- ICONS  -->
+        <div
+          aria-label="clickable search and social media icons "
+          tabindex="0"
+          class="icons"
+        >
+          <div id="icons__search" class="icons__search">
+            <input
+              tabindex="1"
+              type="text"
+              class="input"
+              id="input"
+              placeholder="Search Here: FISD news, calendar, COVID-19 ..."
+            />
+            <button tabindex="0" type="button" class="trigger_search">
+              <i tabindex="0" class="fas fa-search icon"></i>
+            </button>
+          </div>
+          <div class="icons__search sm_hide">
+            <a tabindex="0" href="https://twitter.com/friscoisd"
+              ><i class="fab fa-twitter social"></i
+            ></a>
+          </div>
+          <div tabindex="0" class="icons__search sm_hide">
+            <a href="https://www.facebook.com/friscoisd"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+          </div>
+          <div tabindex="0" class="icons__search sm_hide">
+            <a href="https://www.youtube.com/friscoisdmedia"
+              ><i class="fab fa-youtube"></i
+            ></a>
+          </div>
+          <div tabindex="0" class="icons__search sm_hide">
+            <a href="https://www.instagram.com/friscoschools/"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+          <div tabindex="0" class="icons__search sm_hide">
+            <a href="https://www.linkedin.com/company/frisco-isd/"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Dummy data  -->
+    <div class="container">
+      <h1>Weird Monsters</h1>
+      <div id="app"></div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
