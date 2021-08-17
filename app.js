@@ -81,6 +81,7 @@ function hideMenuItem(containerID, classItem) {
 btnNews.addEventListener("click", () => {
   hideMenuItem(onClick_about, classItem_about);
   hideMenuItem(onClick_schools, classItem_schools);
+  hideMenuItem(onClick_employment, classItem_employment);
   showMenuItem(onClick_news, classItem_news);
   //Click outside the element close the modal
   window.onclick = function (event) {
@@ -100,6 +101,8 @@ btnNews.addEventListener("click", () => {
 btnAbout.addEventListener("click", () => {
   hideMenuItem(onClick_news, classItem_news);
   hideMenuItem(onClick_schools, classItem_schools);
+  hideMenuItem(onClick_employment, classItem_employment);
+
   showMenuItem(onClick_about, classItem_about);
   //Click outside the element close the modal
   window.onclick = function (event) {
@@ -119,12 +122,14 @@ btnAbout.addEventListener("click", () => {
 btnSchools.addEventListener("click", () => {
   hideMenuItem(onClick_news, classItem_news);
   hideMenuItem(onClick_about, classItem_about);
+  hideMenuItem(onClick_employment, classItem_employment);
+
   showMenuItem(onClick_schools, classItem_schools);
 });
 
 btnEmployment.addEventListener("click", () => {
   hideMenuItem(onClick_news, classItem_news);
-  hideMenuItem(onClick_schools, classItem_schools);
+  hideMenuItem(onClick_about, classItem_about);
   hideMenuItem(onClick_schools, classItem_schools);
   showMenuItem(onClick_employment, classItem_employment);
   //Click outside the element close the modal

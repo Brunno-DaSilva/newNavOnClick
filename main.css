@@ -767,7 +767,7 @@ body
   flex: auto;
 }
 
-body header .navigation .nav .employment:hover .employment__column a {
+body header .navigation .nav .employment .show_employment a {
   color: var(--dark-blue) !important;
   text-transform: capitalize;
   padding: 0.5rem 0;
@@ -775,6 +775,12 @@ body header .navigation .nav .employment:hover .employment__column a {
   -webkit-transition: ease-in-out 0.4s;
   transition: ease-in-out 0.4s;
 }
+
+/*******************************************************
+=====================================
+==>        Icons Section
+=====================================
+*******************************************************/
 
 body header .navigation .icons {
   width: 18%;
