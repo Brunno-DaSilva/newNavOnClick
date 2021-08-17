@@ -23,8 +23,13 @@ function onTabClick(event) {
 }
 
 const element = document.getElementById("nav-tab");
-
 element.addEventListener("click", onTabClick, false);
+
+/*********************************************
+ *
+ * Search Icons
+ *
+ * ********************************************/
 
 const trigger_search = document.querySelector(".trigger_search");
 const input = document.querySelector(".input");
@@ -48,6 +53,7 @@ trigger_search.addEventListener("click", () => {
 const btnNews = document.getElementById("btn__news");
 const btnAbout = document.getElementById("btn__about");
 const btnSchools = document.getElementById("btn__schools");
+const btn_close = document.getElementById("btn_close");
 
 let navOpen = false;
 
@@ -109,21 +115,9 @@ btnSchools.addEventListener("click", () => {
   hideMenuItem(onClick_news, classItem_news);
   hideMenuItem(onClick_about, classItem_about);
   showMenuItem(onClick_schools, classItem_schools);
-
-  window.onclick = function (event) {
-    if (!event.target.matches("#btn__schools")) {
-      var dropdowns = document.getElementsByClassName(
-        "display__onClick_schools"
-      );
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains("show_schools")) {
-          openDropdown.classList.remove("show_schools");
-        }
-      }
-    }
-  };
+});
+btn_close.addEventListener("click", () => {
+  hideMenuItem(onClick_schools, classItem_schools);
 });
 
 // const about = document.getElementById("about");
