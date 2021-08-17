@@ -667,7 +667,7 @@ body header .navigation .nav .employment {
   position: relative;
 }
 
-body header .navigation .nav .employment .employment__column {
+/* body header .navigation .nav .employment .employment__column {
   position: absolute;
   top: 120%;
   padding: 0.9rem;
@@ -676,9 +676,9 @@ body header .navigation .nav .employment .employment__column {
   display: none;
   -webkit-transition: ease-in-out 0.4s;
   transition: ease-in-out 0.4s;
-}
+} */
 
-body header .navigation .nav .employment:hover .employment__column {
+body header .navigation .nav .employment .show_employment {
   position: absolute;
   left: -35rem;
   width: 69rem;
@@ -704,29 +704,29 @@ body
   header
   .navigation
   .nav
-  .employment:hover
-  .employment__column
+  .employment
+  .show_employment
   .employment__column_one,
 body
   header
   .navigation
   .nav
-  .employment:hover
-  .employment__column
+  .employment
+  .show_employment
   .employment__column_two,
 body
   header
   .navigation
   .nav
-  .employment:hover
-  .employment__column
+  .employment
+  .show_employment
   .employment__column_three,
 body
   header
   .navigation
   .nav
-  .employment:hover
-  .employment__column
+  .employment
+  .show_employment
   .employment__column_four {
   width: 20%;
   padding: 1rem;
@@ -749,8 +749,8 @@ body
   header
   .navigation
   .nav
-  .employment:hover
-  .employment__column
+  .employment
+  .show_employment
   .employment__column_two {
   width: 30%;
 }
@@ -759,8 +759,8 @@ body
   header
   .navigation
   .nav
-  .employment:hover
-  .employment__column
+  .employment
+  .show_employment
   .employment__column_four {
   -webkit-box-flex: 1;
   -ms-flex: auto;
