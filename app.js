@@ -41,22 +41,56 @@ trigger_search.addEventListener("click", () => {
  * ****************/
 
 const btnNews = document.getElementById("btn__news");
-const onClick_news = document.getElementById("display__onClick_news");
+const btnAbout = document.getElementById("btn__about");
+let navOpen = false;
 
-function showMenuItem(containerID) {
-  containerID.classList.toggle("show");
+const onClick_news = document.getElementById("display__onClick_news");
+const onClick_about = document.getElementById("display__onClick_about");
+const classItem_news = "show";
+const classItem_about = "show_about";
+
+function showMenuItem(containerID, classItem) {
+  console.log(element);
+  containerID.classList.toggle(`${classItem}`);
+}
+function hideMenuItem(containerID, classItem) {
+  containerID.classList.remove(`${classItem}`);
 }
 
 btnNews.addEventListener("click", () => {
-  showMenuItem(onClick_news);
+  navOpen = true;
+  if (navOpen) {
+    showMenuItem(onClick_news, classItem_news);
+    //Click outside the element close the modal
+    window.onclick = function (event) {
+      if (!event.target.matches("#btn__news")) {
+        var dropdowns = document.getElementsByClassName("display__onClick");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains("show")) {
+            openDropdown.classList.remove("show");
+            navOpen = false;
+          }
+        }
+      }
+    };
+  }
+});
+
+btnAbout.addEventListener("click", () => {
+  hideMenuItem(onClick_news, classItem_news);
+  showMenuItem(onClick_about, classItem_about);
+
+  //Click outside the element close the modal
   window.onclick = function (event) {
-    if (!event.target.matches("#btn__news")) {
-      var dropdowns = document.getElementsByClassName("display__onClick");
+    if (!event.target.matches("#btn__about")) {
+      var dropdowns = document.getElementsByClassName("display__onClick_about");
       var i;
       for (i = 0; i < dropdowns.length; i++) {
         var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains("show")) {
-          openDropdown.classList.remove("show");
+        if (openDropdown.classList.contains("show_about")) {
+          openDropdown.classList.remove("show_about");
         }
       }
     }
