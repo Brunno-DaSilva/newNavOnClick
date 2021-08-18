@@ -1196,6 +1196,7 @@ body .sm-screen {
   }
 }
 
+/* Adjust close icon */
 @media (max-width: 845px) {
   .close__mb {
     left: 84.5%;
