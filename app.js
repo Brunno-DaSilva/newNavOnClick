@@ -153,52 +153,10 @@ btn_close.addEventListener("click", () => {
   hideMenuItem(onClick_schools, classItem_schools);
 });
 
-// const about = document.getElementById("about");
-// // const school = document.getElementById("school");
-// // const employment = document.getElementById("employment");
-
-// let display_hide_El_news = document.getElementById("display__onClick_news");
-// let display_hide_El_about = document.getElementById("display__onClick_about");
-// // let display_hide_El_school = document.getElementById("display__onClick_school");
-// // let display_hide_El_employment = document.getElementById(
-// //   "display__onClick_employment"
-// // );
-
 // const lastEl_news = document.getElementById("lastEl_news");
 // const lastEl_about = document.getElementById("lastEl_about");
 // const lastEl = document.getElementById("lastEl_news");
-// // const lastEl = do  cument.getElementById("lastEl_news");
-
-// news.addEventListener("click", () => {
-//   showNavItems(display_hide_El_news);
-// });
-// about.addEventListener("click", () => {
-//   showNavItems_about(display_hide_El_about);
-// });
-
-// function showNavItems(x) {
-//   if (x.style.display === "none") {
-//     x.style.display = "flex";
-//     x.style.flexDirection = "column";
-//     x.style.minWidth = "20rem";
-//     x.style.padding = "0.5rem";
-//     x.style.boxShadow = `0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)`;
-//   } else {
-//     x.style.display = "none";
-//   }
-// }
-
-// function showNavItems_about(x) {
-//   if (x.style.display === "none") {
-//     x.style.display = "flex";
-//     x.style.flexDirection = "column";
-//     x.style.minWidth = "20rem";
-//     x.style.padding = "0.5rem";
-//     x.style.boxShadow = `0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)`;
-//   } else {
-//     x.style.display = "none";
-//   }
-// }
+// //const lastEl = document.getElementById("lastEl_employment");
 
 // // Last element gets a focus out event
 // function focusOut(x) {

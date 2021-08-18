@@ -1048,8 +1048,8 @@ body .sm-screen {
     font-size: 1rem;
   }
 
-  body header .navigation .nav .employment:hover .employment__column {
-    left: -35rem;
+  body header .navigation .nav .employment .show_employment {
+    left: -36rem;
     width: 60rem;
   }
 }
@@ -1087,7 +1087,6 @@ body .sm-screen {
   body header .navigation .logo {
     min-width: 80px;
     max-width: 80px;
-    border: 1px solid red;
   }
   body .md-screen {
     display: none;
@@ -1100,7 +1099,6 @@ body .sm-screen {
   }
   body header .navigation .nav {
     margin-left: -1rem !important;
-    border: 1px solid red;
   }
   body header .navigation .icons .input-open {
     width: 91vw !important;
@@ -1108,7 +1106,6 @@ body .sm-screen {
 
   .icons {
     width: 40px !important;
-    border: 1px solid red;
   }
   .sm_hide {
     display: none !important;
@@ -1137,7 +1134,7 @@ body .sm-screen {
     max-width: 200px;
   }
 
-  .hamburger {
+  .nav__mobile {
     display: block;
   }
 }
