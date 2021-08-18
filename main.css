@@ -48,11 +48,14 @@ body {
   font-family: "Roboto", sans-serif;
   width: 100vw;
   position: relative;
-  /*================================
-= Navigation Style Starts Here
-= BEM - Methodology 
-================================*/
 }
+
+/*******************************************************
+=====================================
+==>  Navigation Style Starts Here 
+==>  BEM - Methodology 
+=====================================
+*******************************************************/
 
 body header {
   position: fixed;
