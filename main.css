@@ -1102,14 +1102,12 @@ body .sm-screen {
 
 @media (max-width: 900px) {
   body {
-    background-color: #ab2eff;
+    background-color: var(--dark-blue);
   }
-
   .icons {
     width: 0 !important;
     display: none !important;
   }
-
   body .lg-screen {
     display: block;
   }
@@ -1131,7 +1129,7 @@ body .sm-screen {
     height: 99vh;
     width: 103vw;
     top: 104%;
-    left: 0%;
+    left: 100%;
     z-index: 899;
     padding: 1.5rem;
     display: -webkit-box;
@@ -1145,6 +1143,7 @@ body .sm-screen {
     -ms-flex-align: flex-start;
     align-items: flex-start;
     border: none;
+    transition: ease-in-out 0.5s;
   }
 
   .close__mb {

@@ -55,7 +55,8 @@ const btnAbout = document.getElementById("btn__about");
 const btnSchools = document.getElementById("btn__schools");
 const btnEmployment = document.getElementById("btn__employment");
 const btnClose = document.getElementById("btn__close");
-const btnMobile = document.getElementById("btn__mobile");
+const btnMobileOpen = document.getElementById("btn__mobile_open");
+const btnMobileClose = document.getElementById("btn__mobile_close");
 
 let navOpen = false;
 
@@ -154,8 +155,22 @@ btnClose.addEventListener("click", () => {
   hideMenuItem(onClick_schools, classItem_schools);
 });
 
-btnMobile.addEventListener("click", () => {
+/*******************************************************
+=====================================
+==>        Mobile
+=====================================
+*******************************************************/
+
+// const btnMobile
+// const btnMobileClose
+
+btnMobileOpen.addEventListener("click", () => {
+  document.getElementById("nav").style.left = "0%";
+});
+
+btnMobileClose.addEventListener("click", () => {
   console.log("mobileMenu btn work");
+  document.getElementById("nav").style.left = "100%";
 });
 
 // const lastEl_news = document.getElementById("lastEl_news");
