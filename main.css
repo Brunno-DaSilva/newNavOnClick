@@ -143,31 +143,6 @@ body header .navigation .nav .nav__primary-item .display__onHover,
   transition: ease-in-out 0.4s;
 }
 
-body header .navigation .nav .nav__primary-item:hover .display__onHover {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  min-width: 20rem;
-  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-    0 10px 10px rgba(0, 0, 0, 0.22);
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-}
-body header .navigation .nav .nav__primary-item:hover .display__onHover a {
-  color: var(--dark-blue) !important;
-  padding: 0.5rem 0;
-  text-transform: capitalize;
-}
-
 .show {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -802,9 +777,11 @@ body header .navigation .icons {
   position: relative;
 }
 
-/**************
-* Icon Search
-**************/
+/*
+=====================================
+==>        Icons Search
+=====================================
+*/
 
 body header .navigation .icons .icons__search {
   display: flex;
@@ -961,7 +938,11 @@ body .arrow-up__employment {
   top: -7.5%;
 }
 
-/*Hamburger*/
+/*******************************************************
+=====================================
+==>        Hamburger Section
+=====================================
+*******************************************************/
 
 .hamburger {
   background-color: transparent;
@@ -1194,6 +1175,35 @@ body .sm-screen {
     cursor: pointer;
     color: var(--orange);
   }
+
+  .show {
+    min-width: 98vw;
+    left: 0;
+  }
+
+  .show_about {
+    max-width: 98vw;
+    left: 0 !important;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+
+  body header .navigation .nav .about .show_about .about__column_right {
+    flex: auto;
+    width: auto;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+  body header .navigation .nav .about .show_about .about__column_left {
+    flex: auto;
+    width: auto;
+    flex-wrap: wrap;
+  }
+  body .arrow-up__about {
+    left: 3.5%;
+    top: -4%;
+  }
 }
 
 /* Adjust close icon */
@@ -1216,9 +1226,13 @@ body .sm-screen {
   .close__mb {
     left: 80.2%;
   }
+  body .arrow-up__about {
+    left: 3.5%;
+    top: -2%;
+  }
 }
 @media (max-width: 550px) {
   .close__mb {
     left: 77%;
   }
-
+}
