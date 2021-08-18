@@ -940,7 +940,7 @@ body .arrow-up__employment {
 
 /*******************************************************
 =====================================
-==>        Hamburger Section
+==>        Hamburger` Section
 =====================================
 *******************************************************/
 
@@ -1180,7 +1180,16 @@ body .sm-screen {
     min-width: 98vw;
     left: 0;
   }
+  body .arrow-up__news {
+    left: 3% !important;
+    top: -7.5% !important;
+  }
 
+  /*
+=================================
+==>     Mobile About
+=================================
+*/
   .show_about {
     max-width: 98vw;
     left: 0 !important;
@@ -1201,8 +1210,92 @@ body .sm-screen {
     flex-wrap: wrap;
   }
   body .arrow-up__about {
-    left: 3.5%;
-    top: -4%;
+    left: 3.5% !important;
+    top: -4% !important;
+  }
+
+  /*
+=================================
+==>     Mobile Schools
+=================================
+*/
+  body header .navigation .nav .nav__primary-item .display__onHover,
+  .display__onClick,
+  .display__onClick_about,
+  .display__onClick_schools,
+  .display__onClick_employment {
+    padding: 0.1rem !important;
+  }
+
+  body header .navigation .nav .schools .show_schools .schooltab__container {
+    width: 100%;
+    min-height: 400px;
+    margin: 0 !important;
+  }
+  body
+    header
+    .navigation
+    .nav
+    .schools
+    .show_schools
+    .schooltab__container
+    p
+    a {
+    padding: 0.2rem;
+  }
+  body
+    header
+    .navigation
+    .nav
+    .schools
+    .show_schools
+    .schooltab__container
+    #nav-tab
+    a {
+    font-size: 1.1rem;
+  }
+
+  .elementary__container,
+  .middle__container,
+  .high__container,
+  .program_centers__container {
+    margin-top: 1.5rem;
+  }
+
+  .high__container,
+  .program_centers__container {
+    margin-top: 1.5rem;
+    flex-direction: column;
+  }
+  .schools__high_item,
+  .schools__program_centers_item {
+    min-height: 100px !important;
+    padding: 0.3rem !important;
+    margin: 0.1rem !important;
+    text-decoration: none;
+  }
+  .schools__program_centers_item {
+    width: 270px;
+  }
+
+  .close {
+    width: 70px;
+    height: 35px;
+    left: 90%;
+    top: 0.2%;
+    font-size: 2.1rem;
+  }
+
+  .show_schools {
+    max-width: 98vw;
+    left: 0 !important;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+  body .arrow-up {
+    left: 2.5%;
+    top: -1%;
   }
 }
 
@@ -1227,8 +1320,15 @@ body .sm-screen {
     left: 80.2%;
   }
   body .arrow-up__about {
-    left: 3.5%;
-    top: -2%;
+    left: 3.5% !important;
+    top: -2% !important;
+  }
+  body .arrow-up {
+    top: -3%;
+  }
+
+  .close {
+    left: 87%;
   }
 }
 @media (max-width: 550px) {
