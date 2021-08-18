@@ -1191,9 +1191,11 @@ body .sm-screen {
 =================================
 */
   .show_about {
-    max-width: 98vw;
-    left: 0 !important;
+    max-width: 98.5vw;
+    left: 0% !important;
     display: flex;
+    justify-content: center !important;
+    align-items: center;
     flex-wrap: wrap;
     box-sizing: border-box;
   }
@@ -1208,6 +1210,10 @@ body .sm-screen {
     flex: auto;
     width: auto;
     flex-wrap: wrap;
+    padding: 0.5rem;
+  }
+  body header .navigation .nav .about .show_about .about__column_middle {
+    padding: 0.5rem;
   }
   body .arrow-up__about {
     left: 3.5% !important;
