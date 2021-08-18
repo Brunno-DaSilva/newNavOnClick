@@ -1297,6 +1297,23 @@ body .sm-screen {
     left: 2.5%;
     top: -1%;
   }
+  /*
+=================================
+==>     Mobile EMPLOYMENT
+=================================
+*/
+
+  .show_employment {
+    max-width: 98vw;
+    left: 0 !important;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+  body .arrow-up__employment {
+    left: 2.6% !important;
+    top: -5.5% !important;
+  }
 }
 
 /* Adjust close icon */
