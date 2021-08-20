@@ -74,12 +74,6 @@ body header {
   -webkit-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3),
     0 15px 12px rgba(0, 0, 0, 0.22);
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
-  /*================================
-    // Nav semantic tag 
-    // that holds all navigation items
-    // Parent must have a fix unity 
-    // so nav becomes 75% of it
-    ================================*/
 }
 
 body header .navigation {
@@ -95,7 +89,6 @@ body header .navigation {
   width: 75%;
   background: var(--dark-blue);
   padding: 1.1rem 0.5rem;
-  /* border: 1px solid rgb(65, 255, 106); */
 }
 
 body header .navigation .logo {
@@ -118,7 +111,6 @@ body header .navigation .nav {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid greenyellow;
 }
 
 body header .navigation .nav .nav__primary-item {
