@@ -901,6 +901,11 @@ body .arrow-up__employment {
   display: none;
 }
 
+body .md-screen,
+body .sm-screen {
+  display: none;
+}
+
 /*******************************************************
 =====================================
 ==>        Media Queries
@@ -909,15 +914,9 @@ body .arrow-up__employment {
 
 /*
 =====================================
-==>        Max-Width: 1605px
+==>        Max-Width: 1914px
 =====================================
 */
-
-body .md-screen,
-body .sm-screen {
-  display: none;
-}
-
 @media (max-width: 1914px) {
   body {
     background-color: #98960e;
@@ -939,6 +938,12 @@ body .sm-screen {
     width: 65vw !important;
   }
 }
+
+/*
+=====================================
+==>        Max-Width: 1449px
+=====================================
+*/
 
 @media (max-width: 1449px) {
   body {
@@ -985,6 +990,11 @@ body .sm-screen {
     width: 60rem;
   }
 }
+/*
+=====================================
+==>        Max-Width: 1284px
+=====================================
+*/
 
 @media (max-width: 1284px) {
   body {
@@ -1007,6 +1017,12 @@ body .sm-screen {
     top: -7.5%;
   }
 }
+
+/*
+=====================================
+==>        Max-Width: 1157px
+=====================================
+*/
 
 @media (max-width: 1157px) {
   body {
@@ -1043,6 +1059,12 @@ body .sm-screen {
     display: none !important;
   }
 }
+
+/*
+=====================================
+==>        Max-Width: 900px
+=====================================
+*/
 
 @media (max-width: 900px) {
   body {
@@ -1265,22 +1287,47 @@ body .sm-screen {
   }
 }
 
-/* Adjust close icon */
+/*
+=====================================
+==>        Max-Width: 845px
+=====================================
+*/
+
 @media (max-width: 845px) {
   .close__mb {
     left: 84.5%;
   }
 }
+
+/*
+=====================================
+==>        Max-Width: 800px
+=====================================
+*/
+
 @media (max-width: 800px) {
   .close__mb {
     left: 83.5%;
   }
 }
+
+/*
+=====================================
+==>        Max-Width: 710px
+=====================================
+*/
 @media (max-width: 710px) {
   .close__mb {
     left: 82.2%;
   }
 }
+
+/*
+=====================================
+==>        Max-Width: 600px
+=====================================
+*/
+
 @media (max-width: 600px) {
   .close__mb {
     left: 80.2%;
@@ -1297,6 +1344,12 @@ body .sm-screen {
     left: 87%;
   }
 }
+
+/*
+=====================================
+==>        Max-Width: 550px
+=====================================
+*/
 @media (max-width: 550px) {
   .close__mb {
     left: 77%;
