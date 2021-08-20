@@ -35,7 +35,7 @@ const displayCharacters = (characters) => {
       return `
             <li class="character">
                 <h2>${character.t}</h2>
-                <p>House: ${character.u}</p>
+                <p> ${character.u}</p>
             </li>
         `;
     })
