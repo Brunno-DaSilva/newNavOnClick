@@ -161,9 +161,6 @@ btnClose.addEventListener("click", () => {
 =====================================
 *******************************************************/
 
-// const btnMobile
-// const btnMobileClose
-
 btnMobileOpen.addEventListener("click", () => {
   document.getElementById("nav").style.left = "0%";
 });
@@ -172,22 +169,3 @@ btnMobileClose.addEventListener("click", () => {
   console.log("mobileMenu btn work");
   document.getElementById("nav").style.left = "100%";
 });
-
-// const lastEl_news = document.getElementById("lastEl_news");
-// const lastEl_about = document.getElementById("lastEl_about");
-// const lastEl = document.getElementById("lastEl_news");
-// //const lastEl = document.getElementById("lastEl_employment");
-
-// // Last element gets a focus out event
-// function focusOut(x) {
-//   x.style.display = "none";
-//   console.log("Focus out");
-// }
-
-// lastEl_news.addEventListener("focusout", () => {
-//   focusOut(display_hide_El_news);
-// });
-
-// lastEl_about.addEventListener("focusout", () => {
-//   focusOut(display_hide_El_about);
-// });
