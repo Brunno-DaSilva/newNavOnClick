@@ -470,18 +470,6 @@ body
   display: block;
 }
 
-/********** TODO: *************
-  [ X ] Add high, middle,
-  and program centers following 
-  from body to the container name  
-  "body
-  header
-  .navigation
-  .nav
-  .schools:hover
-  .school__column
-  .schooltab__container + .elementary__container"
-**********************************/
 body
   header
   .navigation
@@ -520,31 +508,6 @@ body
   flex-wrap: wrap;
 }
 
-/* body
-  header
-  .navigation
-  .nav
-  .schools:hover
-  .school__column
-  .schooltab__container
-  .program_centers {
-  flex-direction: row;
-  justify-content: space-between;
-} */
-
-/********** TODO: *************
-  [ X ] Add high, middle,
-  and program centers following 
-  from body to the container name  
-  "body
-  header
-  .navigation
-  .nav
-  .schools:hover
-  .school__column
-  .schooltab__container + .elementary__container
-  .schools__elementary_item "
-**********************************/
 body
   header
   .navigation
@@ -638,17 +601,6 @@ body header .navigation .nav .employment {
   padding: 0.5rem;
   position: relative;
 }
-
-/* body header .navigation .nav .employment .employment__column {
-  position: absolute;
-  top: 120%;
-  padding: 0.9rem;
-  border-radius: 0.25rem;
-  z-index: 900;
-  display: none;
-  -webkit-transition: ease-in-out 0.4s;
-  transition: ease-in-out 0.4s;
-} */
 
 body header .navigation .nav .employment .show_employment {
   position: absolute;
@@ -951,7 +903,7 @@ body .arrow-up__employment {
 
 /*******************************************************
 =====================================
-==>        Media Query 
+==>        Media Queries
 =====================================
 *******************************************************/
 
