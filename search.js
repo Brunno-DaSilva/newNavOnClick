@@ -1,8 +1,8 @@
 const search__results = document.getElementById("search__results");
 const searchBar = document.getElementById("input");
 
-// get ref of the retrieved  data made globally available
-// to be used anywhere in the code.
+/* get ref of the retrieved  data made globally available
+to be used anywhere in the code.*/
 let hpCharacters = [];
 
 searchBar.addEventListener("keyup", (e) => {
@@ -19,7 +19,6 @@ searchBar.addEventListener("keyup", (e) => {
 
 const loadCharacters = async () => {
   try {
-    // const res = await fetch("https://hp-api.herokuapp.com/api/characters");
     const res = await fetch(
       "https://www.friscoisd.org/searchData/searchTerms.json"
     );
