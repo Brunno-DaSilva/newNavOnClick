@@ -5,24 +5,13 @@ const searchBar = document.getElementById("input");
 to be used anywhere in the code.*/
 let hpCharacters = [];
 
-searchBar.addEventListener("keyup", (e) => {
-  const userInput = e.target.value.toLowerCase();
-  console.log(userInput);
-  const filterChar = hpCharacters.filter((character) => {
-    return (
-      character.t.toLowerCase().includes(userInput) ||
-      character.u.toLowerCase().includes(userInput)
-    );
-  });
-  displayCharacters(filterChar);
-});
-
 const loadCharacters = async () => {
   try {
     const res = await fetch(
       "https://www.friscoisd.org/searchData/searchTerms.json"
     );
     hpCharacters = await res.json();
+
     displayCharacters(hpCharacters);
   } catch (err) {
     console.error(err);
@@ -31,6 +20,8 @@ const loadCharacters = async () => {
 
 const displayCharacters = (characters) => {
   const url = `https://www.friscoisd.org/sc/`;
+  const NO_DATA_FOUND = `<p>No Data Found </p>`;
+
   const htmlString = characters
     .map((character) => {
       return `
@@ -40,7 +31,29 @@ const displayCharacters = (characters) => {
         `;
     })
     .join("");
-  search__results.innerHTML = htmlString;
+
+  if (searchBar.length === 0) {
+    search__results.innerHTML = NO_DATA_FOUND;
+  } else {
+    search__results.innerHTML = htmlString;
+  }
 };
 
+searchBar.addEventListener("keyup", (e) => {
+  const userInput = e.target.value.toLowerCase();
+  console.log(userInput);
+
+  const filterChar = hpCharacters.filter((character) => {
+    return (
+      character.t.toLowerCase().includes(userInput) ||
+      character.u.toLowerCase().includes(userInput)
+    );
+  });
+  displayCharacters(filterChar);
+});
+
 loadCharacters();
+
+if (searchBar.length === 0) {
+  search__results.innerHTML = "";
+}
