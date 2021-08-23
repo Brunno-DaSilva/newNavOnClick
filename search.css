@@ -1,3 +1,11 @@
+:root {
+  --dark-blue: #184366;
+  --light-green: #0e987d;
+  --light-blue: #5ab3c4;
+  --yellow: #e8b20f;
+  --orange: #e95b37;
+  --OffWhite: #f8f8f8;
+}
 #search__results {
   padding-inline-start: 0;
   display: grid;
@@ -10,7 +18,6 @@
   width: 50vw;
   text-align: center;
   margin-top: 5rem;
-  border: 1px solid red;
 }
 
 .character {
@@ -40,4 +47,10 @@
 .character > img {
   max-height: 100px;
   grid-area: image;
+}
+
+.search__link {
+  list-style: none;
+  text-decoration: none;
+  color: var(--yellow);
 }

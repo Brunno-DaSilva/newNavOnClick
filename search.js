@@ -30,12 +30,12 @@ const loadCharacters = async () => {
 };
 
 const displayCharacters = (characters) => {
+  const url = `https://www.friscoisd.org/sc/`;
   const htmlString = characters
     .map((character) => {
       return `
             <li class="character">
-                <h2>${character.t}</h2>
-                <p> ${character.u}</p>
+                <a class="search__link" href="${url}${character.u}" >${character.t}</a>
             </li>
         `;
     })
