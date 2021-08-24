@@ -1095,7 +1095,7 @@ body .sm-screen {
     height: 99vh;
     width: 103vw;
     top: 104%;
-    left: 100%;
+    left: 110%;
     z-index: 899;
     padding: 1.5rem;
     display: -webkit-box;
@@ -1110,6 +1110,7 @@ body .sm-screen {
     align-items: flex-start;
     border: none;
     transition: ease-in-out 0.5s;
+    /* border: 1px solid red; */
   }
 
   .close__mb {
@@ -1316,9 +1317,93 @@ body .sm-screen {
 ==>        Max-Width: 710px
 =====================================
 */
-@media (max-width: 710px) {
+@media (max-width: 734px) {
   .close__mb {
     left: 82.2%;
+  }
+
+  /*
+=================================
+==>     Mobile Schools
+=================================
+*/
+  body header .navigation .nav .nav__primary-item .display__onHover,
+  .display__onClick,
+  .display__onClick_about,
+  .display__onClick_schools,
+  .display__onClick_employment {
+    padding: 0.1rem !important;
+  }
+
+  body header .navigation .nav .schools .show_schools .schooltab__container {
+    width: 100%;
+    min-height: 400px;
+    margin: 0 !important;
+    overflow-y: auto !important;
+  }
+  body header .navigation .nav .schools .show_schools .schooltab__container p {
+    border: 1px solid var(--light-green);
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 1.5rem;
+  }
+
+  body
+    header
+    .navigation
+    .nav
+    .schools
+    .show_schools
+    .schooltab__container
+    p
+    a {
+    padding: 0.1rem;
+    /* border: 1px solid red; */
+  }
+  body
+    header
+    .navigation
+    .nav
+    .schools
+    .show_schools
+    .schooltab__container
+    #nav-tab
+    a {
+    font-size: 1.1rem;
+  }
+
+  .elementary__container,
+  .middle__container,
+  .high__container,
+  .program_centers__container {
+    margin-top: 0.5rem !important;
+    padding: 0.2rem !important;
+  }
+  .schools__middle_item {
+    border: 1px solid red;
+    justify-content: flex-start !important;
+  }
+
+  .high__container,
+  .program_centers__container {
+    margin-top: 1.5rem;
+    flex-direction: column;
+  }
+
+  .schools__program_centers_item {
+    width: 270px;
+    min-height: 50px !important;
+  }
+
+  .close {
+    left: 86%;
+  }
+
+  body .arrow-up {
+    top: -2.29%;
   }
 }
 
@@ -1351,6 +1436,17 @@ body .sm-screen {
 =====================================
 */
 @media (max-width: 550px) {
+  .close__mb {
+    left: 77%;
+  }
+}
+
+/*
+=====================================
+==>        Max-Width: 400px
+=====================================
+*/
+@media (max-width: 400px) {
   .close__mb {
     left: 77%;
   }

@@ -50,6 +50,10 @@ searchBar.addEventListener("keyup", (e) => {
     );
   });
   displayCharacters(filterChar);
+
+  // onKeyup add a class of isActive
+  // to searchItemsContainer once searchbar
+  // is clear add a class of display none
 });
 
 loadCharacters();
