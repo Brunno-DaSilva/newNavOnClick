@@ -1095,7 +1095,7 @@ body .sm-screen {
     height: 99vh;
     width: 103vw;
     top: 104%;
-    left: 100%;
+    left: 110%;
     z-index: 899;
     padding: 1.5rem;
     display: -webkit-box;
@@ -1110,6 +1110,7 @@ body .sm-screen {
     align-items: flex-start;
     border: none;
     transition: ease-in-out 0.5s;
+    border: 1px solid red;
   }
 
   .close__mb {
@@ -1351,6 +1352,17 @@ body .sm-screen {
 =====================================
 */
 @media (max-width: 550px) {
+  .close__mb {
+    left: 77%;
+  }
+}
+
+/*
+=====================================
+==>        Max-Width: 400px
+=====================================
+*/
+@media (max-width: 400px) {
   .close__mb {
     left: 77%;
   }
