@@ -1298,6 +1298,9 @@ body .sm-screen {
   .close__mb {
     left: 84.5%;
   }
+  .arrow-up {
+    display: none;
+  }
 }
 
 /*
@@ -1327,12 +1330,15 @@ body .sm-screen {
 ==>     Mobile Schools
 =================================
 */
+
+  #nav-tab p {
+  }
   body header .navigation .nav .nav__primary-item .display__onHover,
   .display__onClick,
   .display__onClick_about,
   .display__onClick_schools,
   .display__onClick_employment {
-    padding: 0.1rem !important;
+    padding: 0.5rem !important;
   }
 
   body header .navigation .nav .schools .show_schools .schooltab__container {
@@ -1342,9 +1348,9 @@ body .sm-screen {
     overflow-y: auto !important;
   }
   body header .navigation .nav .schools .show_schools .schooltab__container p {
-    border: 1px solid var(--light-green);
     padding: 0 !important;
     margin: 0 !important;
+    margin-bottom: 0.5rem !important;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -1383,7 +1389,6 @@ body .sm-screen {
     padding: 0.2rem !important;
   }
   .schools__middle_item {
-    border: 1px solid red;
     justify-content: flex-start !important;
   }
 
@@ -1400,10 +1405,6 @@ body .sm-screen {
 
   .close {
     left: 86%;
-  }
-
-  body .arrow-up {
-    top: -2.29%;
   }
 }
 
