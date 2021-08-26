@@ -1066,7 +1066,11 @@ body .sm-screen {
 =====================================
 */
 
+/* [ ] FOOTER SET TO NONE - CHANGE  */
 @media (max-width: 900px) {
+  footer {
+    display: none;
+  }
   body {
     background-color: var(--dark-blue);
   }
@@ -1090,13 +1094,13 @@ body .sm-screen {
   }
 
   body header .navigation .nav {
-    position: absolute;
+    position: absolute !important;
     background-color: #184366;
-    height: 99vh;
+    min-height: 110% !important;
     width: 103vw;
     top: 104%;
     left: 110%;
-    z-index: 899;
+    z-index: 998 !important;
     padding: 1.5rem;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1108,9 +1112,7 @@ body .sm-screen {
     -webkit-box-align: flex-start;
     -ms-flex-align: flex-start;
     align-items: flex-start;
-    border: none;
     transition: ease-in-out 0.5s;
-    /* border: 1px solid red; */
   }
 
   .close__mb {
@@ -1345,7 +1347,6 @@ body .sm-screen {
     width: 100%;
     min-height: 400px;
     margin: 0 !important;
-    overflow-y: auto !important;
   }
   body header .navigation .nav .schools .show_schools .schooltab__container p {
     padding: 0 !important;
@@ -1390,6 +1391,11 @@ body .sm-screen {
   }
   .schools__middle_item {
     justify-content: flex-start !important;
+    align-items: flex-start;
+    width: 100%;
+    min-height: 200px !important;
+    padding: 0 !important;
+    margin: 0 !important;
   }
 
   .high__container,
@@ -1406,6 +1412,28 @@ body .sm-screen {
   .close {
     left: 86%;
   }
+  /*
+=================================
+==>     Mobile EMPLOYMENT
+=================================
+*/
+
+  .display__onClick_employment {
+    border: 1px SOLID RED;
+    flex-wrap: wrap !important;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .display__onClick_employment .employment__column_one,
+  .display__onClick_employment .employment__column_two,
+  .display__onClick_employment .employment__column_three {
+    width: 170px !important;
+    box-sizing: border-box;
+  }
+  .display__onClick_employment .employment__column_four {
+    flex: auto;
+  }
 }
 
 /*
@@ -1418,16 +1446,12 @@ body .sm-screen {
   .close__mb {
     left: 80.2%;
   }
-  body .arrow-up__about {
-    left: 3.5% !important;
-    top: -2% !important;
-  }
-  body .arrow-up {
-    top: -3%;
-  }
 
   .close {
     left: 87%;
+  }
+  .container {
+    display: none;
   }
 }
 

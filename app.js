@@ -167,5 +167,5 @@ btnMobileOpen.addEventListener("click", () => {
 
 btnMobileClose.addEventListener("click", () => {
   console.log("mobileMenu btn work");
-  document.getElementById("nav").style.left = "110%";
+  document.getElementById("nav").style.left = "150%";
 });
