@@ -1098,6 +1098,7 @@ body .sm-screen {
     background-color: #184366;
     min-height: 110% !important;
     width: 103vw;
+    height: 100vh;
     top: 104%;
     left: 110%;
     z-index: 998 !important;
@@ -1329,6 +1330,16 @@ body .sm-screen {
 
   /*
 =================================
+==>     Mobile About
+=================================
+*/
+
+  body header .navigation .nav .about .show_about .about__column_middle {
+    flex: auto;
+  }
+
+  /*
+=================================
 ==>     Mobile Schools
 =================================
 */
@@ -1474,6 +1485,6 @@ body .sm-screen {
 */
 @media (max-width: 400px) {
   .close__mb {
-    left: 77%;
+    left: 70%;
   }
 }
