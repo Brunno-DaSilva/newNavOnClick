@@ -376,7 +376,7 @@ body
   #nav-tab {
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
 }
 
@@ -1114,6 +1114,8 @@ body .sm-screen {
     -ms-flex-align: flex-start;
     align-items: flex-start;
     transition: ease-in-out 0.5s;
+    overflow: auto !important;
+    margin-bottom: 0.5rem;
   }
 
   .close__mb {
@@ -1379,7 +1381,6 @@ body .sm-screen {
     p
     a {
     padding: 0.1rem;
-    /* border: 1px solid red; */
   }
   body
     header
@@ -1431,7 +1432,6 @@ body .sm-screen {
 */
 
   .display__onClick_employment {
-    border: 1px SOLID RED;
     flex-wrap: wrap !important;
     justify-content: flex-start;
     align-items: flex-start;
@@ -1483,8 +1483,95 @@ body .sm-screen {
 ==>        Max-Width: 400px
 =====================================
 */
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   .close__mb {
     left: 70%;
+  }
+  /*
+=================================
+==>     Mobile Schools
+=================================
+*/
+
+  body
+    header
+    .navigation
+    .nav
+    .schools
+    .show_schools
+    .schooltab__container
+    #nav-tab {
+    width: 100%;
+  }
+  body
+    header
+    .navigation
+    .nav
+    .schools
+    .show_schools
+    .schooltab__container
+    #nav-tab
+    p {
+    margin-left: 0.2rem !important;
+  }
+
+  body
+    header
+    .navigation
+    .nav
+    .schools
+    .show_schools
+    .schooltab__container
+    #nav-tab
+    a {
+    font-size: 1rem;
+  }
+
+  .close {
+    width: 60px;
+    height: 30px;
+    left: 78%;
+    font-size: 2rem;
+  }
+
+  .show_schools {
+    left: -0.5% !important;
+    padding: 0.1rem !important;
+  }
+}
+
+/*
+=====================================
+==>        Max-Width: 320px
+=====================================
+*/
+@media (max-width: 320px) {
+  /*
+=================================
+==>     Mobile Schools
+=================================
+*/
+
+  body
+    header
+    .navigation
+    .nav
+    .schools
+    .show_schools
+    .schooltab__container
+    #nav-tab {
+    flex-direction: column;
+  }
+
+  body
+    header
+    .navigation
+    .nav
+    .schools
+    .show_schools
+    .schooltab__container
+    #nav-tab
+    a {
+    font-size: 0.9rem;
   }
 }
