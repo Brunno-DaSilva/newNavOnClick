@@ -1391,8 +1391,9 @@ body .sm-screen {
   }
   .schools__middle_item {
     justify-content: flex-start !important;
-    align-items: flex-start;
-    width: 100%;
+    align-items: flex-start !important;
+    width: 200px;
+    flex-wrap: wrap;
     min-height: 200px !important;
     padding: 0 !important;
     margin: 0 !important;
