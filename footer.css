@@ -59,7 +59,7 @@ footer .main_footer .main_footer__mission {
 
 footer .main_footer .main_footer__mission p {
   color: var(--yellow);
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bold;
 }
 
@@ -79,7 +79,7 @@ footer .main_footer .main_footer__mission p {
   margin: 1rem 1.5rem;
 }
 .icons__holder a {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: var(--OffWhite);
   -webkit-transition: ease-in-out 0.4s;
   transition: ease-in-out 0.4s;
@@ -104,7 +104,7 @@ footer .main_footer__address .footer__address {
 }
 
 footer .main_footer__address .footer__address p {
-  font-size: 1.35rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   padding: 1rem 0.5rem;
@@ -128,14 +128,14 @@ footer .main_footer__copyright {
 
 footer .main_footer__copyright p,
 footer .main_footer__copyright a {
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   padding: 1rem 0.5rem;
   padding-bottom: 0.5rem;
   text-transform: uppercase;
 }
 
 footer .main_footer__copyright p {
-  font-size: 1rem;
+  font-size: 0.8rem;
   margin-right: 1rem;
 }
 footer .main_footer__copyright a {
