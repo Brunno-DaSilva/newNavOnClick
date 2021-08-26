@@ -1066,11 +1066,7 @@ body .sm-screen {
 =====================================
 */
 
-/* [ ] FOOTER SET TO NONE - CHANGE  */
 @media (max-width: 900px) {
-  footer {
-    display: none;
-  }
   body {
     background-color: var(--dark-blue);
   }
