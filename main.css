@@ -612,8 +612,8 @@ body header .navigation .nav .employment {
 
 body header .navigation .nav .employment .show_employment {
   position: absolute;
-  left: -35rem;
-  width: 69rem;
+  left: -31.8rem;
+  width: 60rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -894,7 +894,7 @@ body .arrow-up__about {
   top: -4%;
 }
 body .arrow-up__employment {
-  left: 55.5%;
+  left: 55%;
   top: -7.5%;
 }
 
