@@ -227,20 +227,20 @@ body header .navigation .nav .about .show_about .button:hover {
 }
 
 body header .navigation .nav .about .show_about .button__orange {
-  background-color: var(--orange);
+  background-color: #af4429;
   color: var(--OffWhite) !important;
 }
 
 body header .navigation .nav .about .show_about .button__yellow {
-  background-color: #b48803;
+  background-color: #ae860b;
 }
 
 body header .navigation .nav .about .show_about .button__light_green {
-  background-color: #06745e;
+  background-color: #0b725e;
 }
 
 body header .navigation .nav .about .show_about .button__light_blue {
-  background-color: #289ab1;
+  background-color: #448693;
 }
 
 body header .navigation .nav .about .show_about .about__column_left,
