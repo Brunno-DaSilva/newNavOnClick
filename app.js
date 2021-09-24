@@ -39,11 +39,11 @@ trigger_search.addEventListener("click", () => {
   if (!input.classList.contains("input-open")) {
     input.classList.add("input-open");
 
-    trigger_search.innerHTML = "<i class='fas fa-times'>  </i>";
+    trigger_search.innerHTML = `<i aria-label="Close search " tabindex="0" class='fas fa-times icon'>  </i>`;
     inputSearchFocus.focus();
   } else {
     input.classList.remove("input-open");
-    trigger_search.innerHTML = "<i class='fas fa-search'>  </i>";
+    trigger_search.innerHTML = `<i aria-label="Click to open the search and just tart typing" tabindex="0" class='fas fa-search icon'>  </i>`;
   }
 });
 

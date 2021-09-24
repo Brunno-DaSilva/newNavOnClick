@@ -57,7 +57,7 @@
           </div>
           <!-- NEWS -->
           <li class="nav__primary-item">
-            <button type="button" id="btn__news" class="nav_white_text">
+            <button type="button" id="btn__news" class="nav_white_text hover_nav_item">
               NEWS
             </button>
             <div
@@ -96,7 +96,7 @@
           <!-- ABOUT -->
 
           <li class="nav__primary-item about">
-            <button type="button" id="btn__about" class="nav_white_text">
+            <button type="button" id="btn__about" class="nav_white_text hover_nav_item">
               ABOUT
             </button>
             <div
@@ -224,9 +224,10 @@
             </div>
           </li>
           <!-- DEPARTMENTS -->
-          <li class="nav__primary-item animation__underline">
-            <button type="button" class="nav_white_text">
-              <a
+          <li tabindex="-1" class="nav__primary-item animation__underline">
+            <button tabindex="-1"type="button" class="nav_white_text">
+              <a      
+              tabindex="0"
                 class="nav_white_text"
                 href="https://www.friscoisd.org/departments"
               >
@@ -237,7 +238,7 @@
 
           <!-- SCHOOLS -->
           <li id="schools" class="nav__primary-item schools">
-            <button type="button" id="btn__schools" class="nav_white_text">
+            <button type="button" id="btn__schools" class="nav_white_text hover_nav_item">
               SCHOOLS
             </button>
             <div id="display__onClick_schools" class="display__onClick_schools">
@@ -858,7 +859,7 @@
 
           <!-- EMPLOYMENT  -->
           <li class="nav__primary-item employment">
-            <button type="button"  id="btn__employment" class="nav_white_text" href="#">
+            <button type="button"  id="btn__employment" class="nav_white_text hover_nav_item" href="#">
               EMPLOYMENT
             </button>
             <div id="display__onClick_employment" class="display__onClick_employment animated fadeIn">
@@ -938,47 +939,48 @@
         </ul>
 
         <!-- ICONS  -->
-        <div
+        <div 
+        tabindex="-1"
           aria-label="clickable search and social media icons "
-          tabindex="0"
           class="icons"
         >
           <div id="icons__search" class="icons__search">
             <input
-              tabindex="1"
+              tabindex="-1"
               type="text"
               class="input"
               id="input"
               placeholder="Search Here: FISD news, calendar, COVID-19 ..."
               autofocus 
-              />
-            <button tabindex="0" type="button" class="trigger_search">
-              <i tabindex="0" class="fas fa-search icon"></i>
+              />        
+            <button tabindex="-1" type="button" class="trigger_search">
+              <i aria-label="Click to open the search and just tart typing" tabindex="0" class="fas fa-search icon"></i>
             </button>
           </div>
           
-          <div class="icons__search sm_hide">
+          <div tabindex="-1"class="icons__search sm_hide">
             <a tabindex="0" href="https://twitter.com/friscoisd"
               ><i class="fab fa-twitter social"></i
             ></a>
           </div>
-          <div tabindex="0" class="icons__search sm_hide">
-            <a href="https://www.facebook.com/friscoisd"
+
+          <div tabindex="-1" class="icons__search sm_hide">
+            <a tabindex="0" href="https://www.facebook.com/friscoisd"
               ><i class="fab fa-facebook-f"></i
             ></a>
           </div>
-          <div tabindex="0" class="icons__search sm_hide">
-            <a href="https://www.youtube.com/friscoisdmedia"
+          <div tabindex="-1" class="icons__search sm_hide">
+            <a tabindex="0" href="https://www.youtube.com/friscoisdmedia"
               ><i class="fab fa-youtube"></i
             ></a>
           </div>
-          <div tabindex="0" class="icons__search sm_hide">
-            <a href="https://www.instagram.com/friscoschools/"
+          <div tabindex="-1" class="icons__search sm_hide">
+            <a tabindex="0" href="https://www.instagram.com/friscoschools/"
               ><i class="fab fa-instagram"></i
             ></a>
           </div>
-          <div tabindex="0" class="icons__search sm_hide">
-            <a href="https://www.linkedin.com/company/frisco-isd/"
+          <div tabindex="-1" class="icons__search sm_hide">
+            <a tabindex="0" href="https://www.linkedin.com/company/frisco-isd/"
               ><i class="fab fa-linkedin-in"></i
             ></a>
           </div>

@@ -795,20 +795,28 @@ body header .navigation .icons .icons__search a {
   justify-content: center;
   align-items: center;
   color: #fff;
-  outline: 0;
   cursor: pointer;
   text-decoration: none;
   margin: 0 3px;
 }
 
 body header .navigation .icons .icons__search a:hover {
-  color: var(--light-blue);
+  color: var(--yellow);
 }
 
 body .animation__underline {
   position: relative;
   -webkit-transition: ease-in-out 0.4s;
   transition: ease-in-out 0.4s;
+}
+
+.hover_nav_item {
+  -webkit-transition: ease-in-out 0.4s;
+  transition: ease-in-out 0.4s;
+}
+.hover_nav_item:hover {
+  cursor: pointer;
+  color: var(--yellow);
 }
 
 body .animation__underline:hover {
