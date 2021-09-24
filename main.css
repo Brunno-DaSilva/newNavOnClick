@@ -1922,4 +1922,12 @@ body .sm-screen {
   footer .main_footer__address .footer__address p i {
     color: var(--light-blue);
   }
+  footer .main_footer__copyright p {
+    margin-right: 0rem !important;
+  }
+  .address__Fax i,
+  .address__Phone i,
+  .address__Street i {
+    margin: 0.5rem;
+  }
 }
