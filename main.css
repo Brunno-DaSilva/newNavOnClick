@@ -1233,7 +1233,7 @@ body .sm-screen {
   .display__onClick_about,
   .display__onClick_schools,
   .display__onClick_employment {
-    padding: 0.1rem !important;
+    padding: 0.5rem !important;
   }
 
   body header .navigation .nav .schools .show_schools .schooltab__container {
