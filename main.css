@@ -1178,9 +1178,11 @@ body .sm-screen {
   }
 
   .show {
-    min-width: 98vw;
+    min-width: 40vw;
+    min-height: 170px;
     left: 0;
   }
+
   body .arrow-up__news {
     left: 3% !important;
     top: -7.5% !important;
@@ -1239,6 +1241,7 @@ body .sm-screen {
     min-height: 400px;
     margin: 0 !important;
   }
+
   body
     header
     .navigation
@@ -1250,6 +1253,31 @@ body .sm-screen {
     a {
     padding: 0.2rem;
   }
+  .show_schools {
+    max-width: 92vw;
+    left: 0 !important;
+  }
+
+  body
+    header
+    .navigation
+    .nav
+    .schools
+    .show_schools
+    .schooltab__container
+    #nav-tab {
+    width: 100%;
+    margin-top: 1rem;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr 2fr 1fr;
+  }
+
+  .close {
+    width: 70px;
+    height: 35px;
+    font-size: 2.1rem;
+  }
+
   body
     header
     .navigation
@@ -1269,14 +1297,98 @@ body .sm-screen {
     margin-top: 1.5rem;
   }
 
+  .elementary__container {
+    display: grid !important;
+    grid-template-columns: 2fr 2fr 2fr;
+  }
+
+  body
+    header
+    .navigation
+    .nav
+    .schools
+    .show_schools
+    .schooltab__container
+    .middle__container {
+    padding: 0;
+    display: grid !important;
+    grid-template-columns: 2fr 2fr 2fr;
+  }
+
+  body
+    header
+    .navigation
+    .nav
+    .schools
+    .show_schools
+    .schooltab__container
+    .middle__container
+    .schools__middle_item {
+    min-height: 200px !important;
+  }
+
+  body
+    header
+    .navigation
+    .nav
+    .schools
+    .show_schools
+    .schooltab__container
+    .high__container {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    column-gap: 10px;
+    row-gap: 1em;
+  }
+
+  body
+    header
+    .navigation
+    .nav
+    .schools
+    .show_schools
+    .schooltab__container
+    .elementary__container
+    .schools__elementary_item
+    a {
+    margin-bottom: 0rem !important;
+    padding: 0 !important;
+  }
+
   .high__container,
   .program_centers__container {
     margin-top: 1.5rem;
     flex-direction: column;
   }
-  .schools__high_item,
+
+  body
+    header
+    .navigation
+    .nav
+    .schools
+    .show_schools
+    .schooltab__container
+    .high__container
+    .schools__high_item
+    p {
+    padding: 0;
+  }
+
+  body
+    header
+    .navigation
+    .nav
+    .schools
+    .show_schools
+    .schooltab__container
+    .program_centers__container {
+    padding: 0rem;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+  }
+
   .schools__program_centers_item {
-    min-height: 100px !important;
+    min-height: 1px !important;
     padding: 0.3rem !important;
     margin: 0.1rem !important;
     text-decoration: none;
@@ -1285,21 +1397,6 @@ body .sm-screen {
     width: 270px;
   }
 
-  .close {
-    width: 70px;
-    height: 35px;
-    left: 90%;
-    top: 0.2%;
-    font-size: 2.1rem;
-  }
-
-  .show_schools {
-    max-width: 98vw;
-    left: 0 !important;
-    display: flex;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-  }
   body .arrow-up {
     left: 2.5%;
     top: -1%;
@@ -1311,12 +1408,13 @@ body .sm-screen {
 */
 
   .show_employment {
-    max-width: 98vw;
+    max-width: 550px;
     left: 0 !important;
-    display: flex;
-    flex-wrap: wrap;
-    box-sizing: border-box;
+    display: grid !important;
+    grid-template-columns: repeat(3, 2fr);
+    padding-left: 1rem !important;
   }
+
   body .arrow-up__employment {
     left: 2.6% !important;
     top: -5.5% !important;
@@ -1376,8 +1474,6 @@ body .sm-screen {
 =================================
 */
 
-  #nav-tab p {
-  }
   body header .navigation .nav .nav__primary-item .display__onHover,
   .display__onClick,
   .display__onClick_about,
@@ -1473,6 +1569,7 @@ body .sm-screen {
     width: 170px !important;
     box-sizing: border-box;
   }
+
   .display__onClick_employment .employment__column_four {
     flex: auto;
   }
