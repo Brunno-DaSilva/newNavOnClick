@@ -120,7 +120,6 @@ body header .navigation .nav .nav__primary-item {
   padding: 0.5rem;
   padding-top: 0.9rem !important;
   position: relative;
-  border: 1px solid red;
 }
 
 body header .navigation .nav .nav__primary-item .display__onHover,
@@ -897,6 +896,10 @@ body .arrow-up__employment {
   top: -7.5%;
 }
 
+address {
+  font-style: normal;
+}
+
 /*******************************************************
 =====================================
 ==>        Hamburger` Section
@@ -1457,6 +1460,21 @@ body .sm-screen {
   .display__onClick_employment .employment__column_four {
     flex: auto;
   }
+
+  footer {
+    overflow: hidden;
+  }
+
+  footer .main_footer .main_footer__mission p {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  footer .main_footer .main_footer__icons {
+    margin: 2rem 0;
+  }
 }
 
 /*
@@ -1549,6 +1567,13 @@ body .sm-screen {
     left: -0.5% !important;
     padding: 0.1rem !important;
   }
+
+  footer .main_footer .main_footer__mission p {
+    font-size: 1.9rem !important;
+  }
+  footer .main_footer .main_footer__icons {
+    margin: 1.5rem 0;
+  }
 }
 
 /*
@@ -1556,7 +1581,7 @@ body .sm-screen {
 ==>        Max-Width: 320px
 =====================================
 */
-@media (max-width: 320px) {
+@media (max-width: 325px) {
   /*
 =================================
 ==>     Mobile Schools
@@ -1584,5 +1609,30 @@ body .sm-screen {
     #nav-tab
     a {
     font-size: 0.9rem;
+  }
+
+  .ourMissionP * {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  footer .main_footer .main_footer__mission p {
+    font-size: 1.5rem !important;
+  }
+  footer .main_footer .main_footer__icons {
+    margin: 0.5rem 0;
+  }
+  footer .icons__holder a {
+    font-size: 1rem;
+  }
+  footer .main_footer__address .footer__address p {
+    font-size: 0.9rem !important;
+    text-transform: uppercase;
+    letter-spacing: 0 !important;
+    padding: 0.5rem 0.2rem !important;
+  }
+  footer .main_footer__address .footer__address p i {
+    color: var(--light-blue);
   }
 }
