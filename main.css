@@ -232,15 +232,15 @@ body header .navigation .nav .about .show_about .button__orange {
 }
 
 body header .navigation .nav .about .show_about .button__yellow {
-  background-color: var(--yellow);
+  background-color: #b48803;
 }
 
 body header .navigation .nav .about .show_about .button__light_green {
-  background-color: var(--light-green);
+  background-color: #06745e;
 }
 
 body header .navigation .nav .about .show_about .button__light_blue {
-  background-color: var(--light-blue);
+  background-color: #289ab1;
 }
 
 body header .navigation .nav .about .show_about .about__column_left,
@@ -319,6 +319,7 @@ body
   .button__yellow {
   text-transform: uppercase;
   color: var(--OffWhite) !important;
+  font-weight: bolder;
 }
 
 /*******************************************************
