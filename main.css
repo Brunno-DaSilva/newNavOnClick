@@ -1455,6 +1455,9 @@ body .sm-screen {
   .close__mb {
     left: 79%;
   }
+  .show {
+    min-width: 50vw;
+  }
 
   /*
 =================================
@@ -1640,14 +1643,30 @@ body .sm-screen {
 
 @media (max-width: 600px) {
   .close__mb {
-    left: 80.2%;
+    left: 78%;
   }
 
   .close {
     left: 87%;
   }
+
   .container {
     display: none;
+  }
+  .show {
+    min-width: 60vw;
+  }
+  /*
+=================================
+==> EMPLOYMENT 600px
+=================================
+*/
+  .show_employment {
+    max-width: 520px;
+    left: 0 !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, 2fr);
+    padding-left: 1rem !important;
   }
 }
 
@@ -1660,6 +1679,10 @@ body .sm-screen {
   .close__mb {
     left: 77%;
   }
+  .show {
+    min-width: 70vw;
+  }
+
   .close {
     width: 60px;
     height: 30px;
@@ -1733,6 +1756,14 @@ body .sm-screen {
     .program_centers__container {
     grid-template-columns: 2fr !important;
   }
+  /*
+=================================
+==> EMPLOYMENT 550px
+=================================
+*/
+  .show_employment {
+    max-width: 420px;
+  }
 }
 
 /*
@@ -1743,6 +1774,9 @@ body .sm-screen {
 @media (max-width: 450px) {
   .close__mb {
     left: 70%;
+  }
+  .show {
+    min-width: 80vw;
   }
   /*
 =================================
@@ -1794,6 +1828,15 @@ body .sm-screen {
   .show_schools {
     left: -0.5% !important;
     padding: 0.1rem !important;
+  }
+
+  /*
+=================================
+==> EMPLOYMENT 600px
+=================================
+*/
+  .show_employment {
+    max-width: 380px;
   }
 
   footer .main_footer .main_footer__mission p {
