@@ -1776,7 +1776,7 @@ body .sm-screen {
     left: 70%;
   }
   .show {
-    min-width: 80vw;
+    min-width: 70vw;
   }
   /*
 =================================
@@ -1826,17 +1826,23 @@ body .sm-screen {
   }
 
   .show_schools {
+    width: 85vw !important;
     left: -0.5% !important;
     padding: 0.1rem !important;
+  }
+  .elementary__container {
+    grid-template-columns: 1fr;
+    margin-bottom: 80px;
   }
 
   /*
 =================================
-==> EMPLOYMENT 600px
+==> EMPLOYMENT 480px
 =================================
 */
   .show_employment {
-    max-width: 380px;
+    max-width: 320px;
+    grid-template-columns: repeat(1, 2fr);
   }
 
   footer .main_footer .main_footer__mission p {
@@ -1853,11 +1859,21 @@ body .sm-screen {
 =====================================
 */
 @media (max-width: 325px) {
+  .close__mb {
+    left: 60%;
+    top: 1.5%;
+  }
   /*
 =================================
 ==>     Mobile Schools
 =================================
 */
+  .close {
+    width: 60px;
+    height: 30px;
+    left: 68%;
+    font-size: 1.8rem;
+  }
 
   body
     header
