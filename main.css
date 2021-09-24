@@ -1047,13 +1047,15 @@ body .sm-screen {
     background-color: #2e54ff;
   }
   body header .navigation {
-    width: 95% !important;
-    justify-content: space-between;
+    width: 88% !important;
+    justify-content: flex-start;
   }
+
   body header .navigation .logo {
     min-width: 80px;
     max-width: 80px;
   }
+
   body .md-screen {
     display: none;
   }
@@ -1063,16 +1065,22 @@ body .sm-screen {
   body .sm-screen {
     display: block;
   }
+
   body header .navigation .nav {
-    margin-left: -1rem !important;
+    margin-left: 2rem !important;
+  }
+
+  body header .navigation .icons {
+    margin-left: 2rem !important;
   }
   body header .navigation .icons .input-open {
-    width: 91vw !important;
+    width: 71vw !important;
   }
 
   .icons {
     width: 40px !important;
   }
+
   .sm_hide {
     display: none !important;
   }
@@ -1088,9 +1096,16 @@ body .sm-screen {
   body {
     background-color: var(--dark-blue);
   }
+  body header .navigation .nav {
+    margin-left: 0rem !important;
+  }
+
   .icons {
     width: 0 !important;
     display: none !important;
+  }
+  body header .navigation {
+    justify-content: space-between;
   }
   body .lg-screen {
     display: block;
