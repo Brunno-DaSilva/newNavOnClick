@@ -11,8 +11,10 @@
   width: 800px;
   position: absolute;
   top: 8%;
+  left: 20%;
   background-color: var(--dark-blue);
   border-radius: 20px;
+  padding: 0.1rem;
 }
 
 #search__results {
@@ -24,7 +26,7 @@
 
 .character {
   list-style-type: none;
-  background-color: var(--dark-blue);
+  background-color: transparent;
   border-radius: 3px;
   padding: 10px 20px;
   display: grid;

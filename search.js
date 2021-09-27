@@ -30,8 +30,8 @@ const displayDataHTML = (matches) => {
     const htmlData = matches
       .map((match) => {
         return `
-            <li class="character">
-                <a class="search__link" href="${url}${match.u}" >${match.t}</a>
+            <li tabindex="-1" class="character">
+                <a tabindex="0" class="search__link" href="${url}${match.u}" >${match.t}</a>
             </li>
         `;
       })
