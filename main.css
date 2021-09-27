@@ -921,7 +921,8 @@ address {
 }
 
 body .md-screen,
-body .sm-screen {
+body .sm-screen,
+body .sm-screen_search {
   display: none;
 }
 
@@ -1075,7 +1076,13 @@ body .sm-screen {
     margin-left: 2rem !important;
   }
   body header .navigation .icons .input-open {
-    width: 71vw !important;
+    width: 90vw !important;
+  }
+
+  #search__results_container {
+    width: 800px;
+    top: 7.3% !important;
+    left: 7% !important;
   }
 
   .icons {
@@ -1114,6 +1121,13 @@ body .sm-screen {
   body .sm-screen {
     display: none;
   }
+  body .sm-screen_search {
+    display: block;
+  }
+  body .sm-screen_search button {
+    background: transparent !important;
+  }
+
   body header .navigation .logo {
     min-width: 200px;
     max-width: 200px;
