@@ -10,27 +10,28 @@
 #search__results_container {
   width: 800px;
   position: absolute;
-  top: 8%;
+  top: 7.3%;
   left: 20%;
   background-color: var(--dark-blue);
   border-radius: 20px;
-  padding: 0.1rem;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 #search__results {
   padding-inline-start: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-gap: 20px;
+  grid-gap: 5px;
 }
 
 .character {
   list-style-type: none;
   background-color: transparent;
   border-radius: 3px;
-  padding: 10px 20px;
+  padding: 5px 10px;
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-areas:
     "name image"
     "house image";
@@ -38,9 +39,13 @@
   -webkit-transition: ease-in-out 0.4s;
   transition: ease-in-out 0.4s;
 }
-.character:hover {
+.character a {
+  -webkit-transition: ease-in-out 0.4s;
+  transition: ease-in-out 0.4s;
+}
+.character a:hover {
   cursor: pointer;
-  color: var(--yellow);
+  color: var(--yellow) !important;
 }
 
 .character > h2 {
@@ -62,4 +67,8 @@
   list-style: none;
   text-decoration: none;
   color: var(--OffWhite);
+}
+
+.displayNone {
+  display: none;
 }
