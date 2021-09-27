@@ -777,6 +777,7 @@ body header .navigation .icons .input-open {
   margin-right: 10px !important;
   color: #1e5583;
   font-size: 1rem;
+  z-index: 999;
 }
 
 body header .navigation .icons .input-open::placeholder {
@@ -955,7 +956,13 @@ body .sm-screen_search {
   }
 
   body header .navigation .icons .input-open {
-    width: 65vw !important;
+    width: 64vw !important;
+  }
+
+  #search__results_container {
+    width: 58vw !important;
+    top: 7.3%;
+    left: 12% !important;
   }
 }
 
@@ -1046,7 +1053,7 @@ body .sm-screen_search {
 
 @media (max-width: 1157px) {
   body {
-    background-color: #2e54ff;
+    background-color: #3aebf1;
   }
   body header .navigation {
     width: 88% !important;
@@ -1069,18 +1076,18 @@ body .sm-screen_search {
   }
 
   body header .navigation .nav {
-    margin-left: 2rem !important;
+    margin-left: 3rem !important;
   }
 
   body header .navigation .icons {
-    margin-left: 2rem !important;
+    margin-left: 3rem !important;
   }
   body header .navigation .icons .input-open {
-    width: 90vw !important;
+    width: 77vw !important;
   }
 
   #search__results_container {
-    width: 800px;
+    width: 800px !important;
     top: 7.3% !important;
     left: 7% !important;
   }
@@ -1094,13 +1101,33 @@ body .sm-screen_search {
   }
 }
 
+@media (max-width: 1094px) {
+  body {
+    background-color: #c9f13a;
+  }
+  body header .navigation .nav {
+    margin-left: 1.5rem !important;
+  }
+
+  body header .navigation .icons {
+    margin-left: 3.5rem !important;
+  }
+  body header .navigation .icons .input-open {
+    width: 850px !important;
+  }
+
+  #search__results_container {
+    top: 7.5% !important;
+    left: 7% !important;
+  }
+}
 /*
 =====================================
 ==>        Max-Width: 900px
 =====================================
 */
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
   body {
     background-color: var(--dark-blue);
   }
