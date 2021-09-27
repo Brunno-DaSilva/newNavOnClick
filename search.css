@@ -21,20 +21,17 @@
 #search__results {
   padding-inline-start: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-gap: 2px;
 }
 
 .character {
   list-style-type: none;
   background-color: transparent;
   border-radius: 3px;
-  padding: 5px 10px;
+  padding: 10px 15px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    "name image"
-    "house image";
+  grid-template-columns: 1fr !important;
   text-align: left;
   -webkit-transition: ease-in-out 0.4s;
   transition: ease-in-out 0.4s;
@@ -46,21 +43,6 @@
 .character a:hover {
   cursor: pointer;
   color: var(--yellow) !important;
-}
-
-.character > h2 {
-  grid-area: name;
-  margin-bottom: 0px;
-}
-
-.character > p {
-  grid-area: house;
-  margin: 0;
-}
-
-.character > img {
-  max-height: 100px;
-  grid-area: image;
 }
 
 .search__link {
