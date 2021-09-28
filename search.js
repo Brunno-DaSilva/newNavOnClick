@@ -42,7 +42,6 @@ const displayDataHTML = (matches) => {
 
 const onFocusOut = (event) => {
   event.target.value = "";
-
   setTimeout(function () {
     search__results.innerHTML = "";
   }, 500);
