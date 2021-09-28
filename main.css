@@ -96,6 +96,9 @@ body header .navigation .logo {
   width: 230px;
   padding: 0.5rem;
 }
+body header .navigation .logo #logo-lg {
+  outline: none !important;
+}
 
 body header .navigation .logo img {
   width: 80%;
@@ -956,7 +959,7 @@ body .sm-screen_search {
   }
 
   body header .navigation .icons .input-open {
-    width: 64vw !important;
+    width: 65vw !important;
   }
 
   #search__results_container {

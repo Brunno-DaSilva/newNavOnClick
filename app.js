@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const logo_lg = document.getElementById("logo-lg");
+
   /*********************************************
    *
    * Inner School tab
@@ -42,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
   trigger_search.addEventListener("click", () => {
     if (!input.classList.contains("input-open")) {
       input.classList.add("input-open");
-      trigger_search.innerHTML = `<i aria-label="Close search " tabindex="0" class='fas fa-times icon'>  </i>`;
+      trigger_search.innerHTML = `<i style="color: #ef8469" aria-label="Close search " tabindex="0" class='fas fa-times icon'>  </i>`;
       inputSearchFocus.focus();
     } else {
       input.classList.remove("input-open");
@@ -177,4 +179,8 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("mobileMenu btn work");
     document.getElementById("nav").style.left = "150%";
   });
+
+  window.onload = function () {
+    logo_lg.focus();
+  };
 });
