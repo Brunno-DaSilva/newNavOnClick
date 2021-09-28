@@ -1,5 +1,7 @@
 const search__results = document.getElementById("search__results");
 const searchBar = document.getElementById("input");
+const header = document.getElementsByTagName("header")[0];
+
 const searchStates = async (searchText) => {
   const res = await fetch(
     "https://www.friscoisd.org/searchData/searchTerms.json"
@@ -40,8 +42,11 @@ const displayDataHTML = (matches) => {
 
 const onFocusOut = (event) => {
   event.target.value = "";
-  search__results.innerHTML = "";
+
+  setTimeout(function () {
+    search__results.innerHTML = "";
+  }, 500);
 };
 
 searchBar.addEventListener("input", () => searchStates(searchBar.value));
-searchBar.addEventListener("focusout", onFocusOut);
+header.addEventListener("focusout", onFocusOut);
