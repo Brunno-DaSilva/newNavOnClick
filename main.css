@@ -741,6 +741,7 @@ body header .navigation .icons .icons__search {
   display: flex;
   padding: 0 !important;
 }
+
 body header .navigation .icons .icons__search a {
   padding: 0;
 }
@@ -787,7 +788,7 @@ body header .navigation .icons .input-open::placeholder {
   font-size: 1rem;
 }
 
-body header .navigation .icons .icons__search a {
+body header .navigation .icons .icons__search .anchor {
   padding: 0 1rem;
   color: var(--OffWhite);
   font-size: 1.2rem;

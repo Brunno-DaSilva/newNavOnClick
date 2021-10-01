@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
   search__results.addEventListener("click", function (e) {
     if (e.target && e.target.matches("li.character")) {
       search__results.innerHTML = "";
-      alert("Click" + e.target.innerText);
+      e.target.focus();
     }
   });
 
