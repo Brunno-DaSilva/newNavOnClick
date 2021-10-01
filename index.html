@@ -965,15 +965,16 @@
               placeholder="Search Here: FISD news, calendar, COVID-19 ..."
               autofocus 
              
-              />        
+              />   
+              <div tabindex="0" id="search__results_container" >
+                <ul tabindex="0" id="search__results"></ul>
+              </div>     
             <button id="trigger_search" tabindex="0" type="button" class="trigger_search">
               <i 
               id="searchIcon" 
               aria-label="Click to open the search and just tart typing" class="fas fa-search icon"></i>
             </button>
-            <div id="search__results_container" >
-              <ul tabindex="0" id="search__results"></ul>
-            </div>
+            
           </div>
           
           <div tabindex="-1"class="icons__search sm_hide ">
