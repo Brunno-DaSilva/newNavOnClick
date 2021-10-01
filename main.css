@@ -963,9 +963,9 @@ body .sm-screen_search {
   }
 
   #search__results_container {
-    width: 58vw !important;
-    top: 7.3%;
-    left: 12% !important;
+    min-width: 55vw !important;
+    top: 130.3% !important;
+    left: -430% !important;
   }
 }
 
@@ -1019,6 +1019,11 @@ body .sm-screen_search {
     left: -36rem;
     width: 60rem;
   }
+  #search__results_container {
+    min-width: 60vw !important;
+    top: 130.3% !important;
+    left: -450% !important;
+  }
 }
 /*
 =====================================
@@ -1045,6 +1050,11 @@ body .sm-screen_search {
   body .arrow-up__employment {
     left: 64.5%;
     top: -7.5%;
+  }
+  #search__results_container {
+    min-width: 65vw !important;
+    top: 130.3% !important;
+    left: -450% !important;
   }
 }
 
@@ -1091,8 +1101,8 @@ body .sm-screen_search {
 
   #search__results_container {
     width: 800px !important;
-    top: 7.3% !important;
-    left: 7% !important;
+    top: 130.3% !important;
+    left: -2100% !important;
   }
 
   .icons {
@@ -1120,8 +1130,8 @@ body .sm-screen_search {
   }
 
   #search__results_container {
-    top: 7.5% !important;
-    left: 7% !important;
+    top: 130.3% !important;
+    left: -2050% !important;
   }
 }
 /*

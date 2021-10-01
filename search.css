@@ -9,9 +9,9 @@
 
 #search__results_container {
   position: absolute;
-  min-width: 1100px !important;
-  top: 130.3% !important;
-  left: -432% !important;
+  min-width: 1100px;
+  top: 130.3%;
+  left: -432%;
   background-color: var(--dark-blue);
   border-radius: 20px;
   border-top-left-radius: 0;
