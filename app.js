@@ -34,6 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const search__results = document.getElementById("search__results");
   const searchBar = document.getElementById("input");
   const header = document.getElementsByTagName("header")[0];
+  const searchIcon = document.getElementById("searchIconX");
+  console.log("searchIcon: ", searchIcon);
 
   trigger_search.addEventListener("click", () => {
     if (!input.classList.contains("input-open")) {
@@ -44,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
       style="color: 
       #ef8469" 
       aria-label="Close search" 
-      tabindex="0" 
+      
       class='fas fa-times icon'>  </i>`;
       searchBar.focus();
     } else {
@@ -53,8 +55,9 @@ document.addEventListener("DOMContentLoaded", () => {
       <i 
       id="searchIcon" 
       aria-label="Click to open the search and just tart typing" 
-      tabindex="0" 
+      
       class='fas fa-search icon'>  </i>`;
+      console.log("searchIcon: ", searchIcon);
     }
   });
 
@@ -102,6 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
     search__results.innerHTML = "";
   };
 
+  //Clear form and match results
   searchBar.addEventListener("input", () => searchStates(searchBar.value));
   header.addEventListener("focusout", onFocusOut);
 
