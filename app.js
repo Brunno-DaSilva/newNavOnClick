@@ -10,11 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
   function onTabClick(event) {
     let activeTabs = document.querySelectorAll(".active");
 
-    // deactivate existing active tab and panel
-    // for( let i = 0; i < activeTabs.length; i++) {
-    //   activeTabs[i].className = activeTabs[i].className.replace('active', '');
-    // }
-
     activeTabs.forEach(function (tab) {
       tab.className = tab.className.replace("active", "");
     });
