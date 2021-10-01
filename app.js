@@ -31,21 +31,89 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const trigger_search = document.querySelector(".trigger_search");
   const input = document.querySelector(".input");
-  const inputSearchFocus = document.getElementById("input");
-  const search__results_container = document.getElementById(
-    "search__results_container"
-  );
+  const search__results = document.getElementById("search__results");
+  const searchBar = document.getElementById("input");
+  const header = document.getElementsByTagName("header")[0];
 
   trigger_search.addEventListener("click", () => {
     if (!input.classList.contains("input-open")) {
       input.classList.add("input-open");
-      trigger_search.innerHTML = `<i style="color: #ef8469" aria-label="Close search " tabindex="0" class='fas fa-times icon'>  </i>`;
-      inputSearchFocus.focus();
+      trigger_search.innerHTML = `
+      <i 
+      id="searchIcon"
+      style="color: 
+      #ef8469" 
+      aria-label="Close search" 
+      tabindex="0" 
+      class='fas fa-times icon'>  </i>`;
+      searchBar.focus();
     } else {
       input.classList.remove("input-open");
-      trigger_search.innerHTML = `<i aria-label="Click to open the search and just tart typing" tabindex="0" class='fas fa-search icon'>  </i>`;
+      trigger_search.innerHTML = `
+      <i 
+      id="searchIcon" 
+      aria-label="Click to open the search and just tart typing" 
+      tabindex="0" 
+      class='fas fa-search icon'>  </i>`;
     }
   });
+
+  const searchStates = async (searchText) => {
+    const res = await fetch(
+      "https://www.friscoisd.org/searchData/searchTerms.json"
+    );
+    const states = await res.json();
+
+    // Get match to current text input
+
+    let matches = states.filter((state) => {
+      const regex = new RegExp(`${searchText}`, "gi");
+      return state.t.match(regex) || state.u.match(regex);
+    });
+
+    if (searchText.length === 0 || searchText.length == null) {
+      matches = [];
+      search__results.innerHTML = "";
+    }
+    displayDataHTML(matches);
+  };
+
+  // show data to HTML page
+  const displayDataHTML = (matches) => {
+    if (matches.length > 0) {
+      const url = `https://www.friscoisd.org/sc/`;
+      const htmlData = matches
+        .map((match) => {
+          return `
+            <li tabindex="-1" class="character">
+                <a tabindex="0" class="search__link" href="${url}${match.u}" >${match.t}</a>
+            </li>
+        `;
+        })
+        .join("");
+      search__results.innerHTML = htmlData;
+    }
+  };
+
+  const onFocusOut = (event) => {
+    event.target.value = "";
+  };
+  const clearData = () => {
+    search__results.innerHTML = "";
+  };
+
+  searchBar.addEventListener("input", () => searchStates(searchBar.value));
+  header.addEventListener("focusout", onFocusOut);
+
+  search__results.addEventListener("click", function (e) {
+    if (e.target && e.target.matches("li.character")) {
+      search__results.innerHTML = "";
+      alert("Click" + e.target.innerText);
+    }
+  });
+
+  trigger_search.addEventListener("click", clearData);
+  trigger_search.addEventListener("focus", clearData);
 
   /*********************************************
    *
