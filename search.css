@@ -9,9 +9,9 @@
 
 #search__results_container {
   position: absolute;
-  width: 60vw;
+  width: 800px;
   top: 7.3%;
-  left: 13%;
+  left: 14%;
   background-color: var(--dark-blue);
   border-radius: 20px;
   border-top-left-radius: 0;
