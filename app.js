@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
     search__results.innerHTML = "";
   };
 
-  //Clear form and match results
+  //[ x ] Clear form and match results
   searchBar.addEventListener("input", () => searchStates(searchBar.value));
   header.addEventListener("focusout", onFocusOut);
 
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  //Get a arrow key to work in a keydown
+  //[ x ] Get arrow keys to work in a keydown event
 
   function focusTransferOnKeyDown(e) {
     const focusableInputElements = search__results.getElementsByTagName("a");
