@@ -34,8 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const search__results = document.getElementById("search__results");
   const searchBar = document.getElementById("input");
   const header = document.getElementsByTagName("header")[0];
-  const searchIcon = document.getElementById("searchIconX");
-  console.log("searchIcon: ", searchIcon);
+  const icons__search = document.getElementById("icons__search");
 
   trigger_search.addEventListener("click", () => {
     if (!input.classList.contains("input-open")) {
@@ -116,8 +115,31 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  //Get a arrow key to work in a keydown
+
+  function focusTransferOnKeyDown(e) {
+    const focusableInputElements = search__results.getElementsByTagName("a");
+
+    const focusable = [...focusableInputElements];
+    const index = focusable.indexOf(document.activeElement);
+    let nextIndex = 0;
+
+    if (e.keyCode === 38 || e.keyCode === 37) {
+      // up and left arrow
+      e.preventDefault();
+      nextIndex = index > 0 ? index - 1 : 0;
+      focusableInputElements[nextIndex].focus();
+    } else if (e.keyCode === 40 || e.keyCode === 39) {
+      // down and right arrow
+      e.preventDefault();
+      nextIndex = index + 1 < focusable.length ? index + 1 : index;
+      focusableInputElements[nextIndex].focus();
+    }
+  }
+
   trigger_search.addEventListener("click", clearData);
   trigger_search.addEventListener("focus", clearData);
+  icons__search.addEventListener("keydown", focusTransferOnKeyDown);
 
   /*********************************************
    *
