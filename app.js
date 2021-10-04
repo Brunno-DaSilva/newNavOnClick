@@ -122,6 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const focusable = [...focusableInputElements];
     const index = focusable.indexOf(document.activeElement);
+    let lastItem = focusable[focusable.length - 1];
     let nextIndex = 0;
 
     if (e.keyCode === 38 || e.keyCode === 37) {
@@ -134,6 +135,12 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
       nextIndex = index + 1 < focusable.length ? index + 1 : index;
       focusableInputElements[nextIndex].focus();
+
+      if (document.activeElement === lastItem) {
+        if (e.keyCode === 40 || e.keyCode === 39) {
+          trigger_search.focus();
+        }
+      }
     }
   }
 
