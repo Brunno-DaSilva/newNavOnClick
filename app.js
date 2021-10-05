@@ -69,12 +69,17 @@ document.addEventListener("DOMContentLoaded", () => {
     // Get match to current text input
 
     let matches = states.filter((state) => {
-      const regex = new RegExp(`${searchText}`, "gi");
+      const regex = new RegExp(searchText, "gi");
 
       return state.t.match(regex) || state.u.match(regex);
     });
 
     if (searchText.length === 0) {
+      console.log("MATCHS IF");
+      matches = [];
+      search__results.innerHTML = "";
+    }
+    if (searchText.length < 2) {
       matches = [];
       search__results.innerHTML = "";
     }
@@ -84,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // show data to HTML page
   const displayDataHTML = (matches) => {
-    if (matches.length > 0) {
+    if (matches.length > 2) {
       const url = `https://www.friscoisd.org/sc/`;
 
       const htmlData = matches
@@ -103,8 +108,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const onFocusOut = (event) => {
     event.target.value = "";
   };
+
   const clearData = () => {
     search__results.innerHTML = "";
+    matches = [];
   };
 
   //[ x ] Clear form and match results
@@ -181,7 +188,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const classItem_employment = "show_employment";
 
   function showMenuItem(containerID, classItem) {
-    console.log(element);
     containerID.classList.toggle(`${classItem}`);
   }
   function hideMenuItem(containerID, classItem) {
