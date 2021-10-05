@@ -70,13 +70,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let matches = states.filter((state) => {
       const regex = new RegExp(`${searchText}`, "gi");
+
       return state.t.match(regex) || state.u.match(regex);
     });
 
-    if (searchText.length === 0 || searchText.length == null) {
+    if (searchText.length === 0) {
       matches = [];
       search__results.innerHTML = "";
     }
+
     displayDataHTML(matches);
   };
 
@@ -84,6 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const displayDataHTML = (matches) => {
     if (matches.length > 0) {
       const url = `https://www.friscoisd.org/sc/`;
+
       const htmlData = matches
         .map((match) => {
           return `
@@ -124,7 +127,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let lastItem = focusable[focusable.length - 1];
     let nextIndex = 0;
 
-    console.log("focusable", focusable);
     if (e.keyCode === 38 || e.keyCode === 37) {
       // up and left arrow
       e.preventDefault();
