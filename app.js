@@ -119,12 +119,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function focusTransferOnKeyDown(e) {
     const focusableInputElements = search__results.getElementsByTagName("a");
-
     const focusable = [...focusableInputElements];
     const index = focusable.indexOf(document.activeElement);
     let lastItem = focusable[focusable.length - 1];
     let nextIndex = 0;
 
+    console.log("focusable", focusable);
     if (e.keyCode === 38 || e.keyCode === 37) {
       // up and left arrow
       e.preventDefault();
@@ -138,7 +138,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (document.activeElement === lastItem) {
         if (e.keyCode === 40 || e.keyCode === 39) {
-          trigger_search.focus();
+          setTimeout(function () {
+            trigger_search.focus();
+          }, 2500);
         }
       }
     }
