@@ -77,12 +77,16 @@ document.addEventListener("DOMContentLoaded", () => {
       matches = [];
       search__results.innerHTML = "";
     }
+    if (searchText.length <= 1) {
+      matches = [];
+      search__results.innerHTML = "";
+    }
     displayDataHTML(matches);
   };
 
   // show data to HTML page
   const displayDataHTML = (matches) => {
-    if (matches.length > 0) {
+    if (matches.length > 2) {
       const url = `https://www.friscoisd.org/sc/`;
       const htmlData = matches
         .map((match) => {
