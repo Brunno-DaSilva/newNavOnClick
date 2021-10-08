@@ -123,8 +123,16 @@ document.addEventListener("DOMContentLoaded", () => {
               <a 
               tabindex="0" 
               class="search__link" 
-              href="${urlFISD}"> Go to: Frisco ISD Website Search page</a>
+              href="${urlFISD} ${this.value}"> Go to: Frisco ISD Website Search page</a>
         </li>`;
+      }
+      if (
+        this.value === "" ||
+        this.value == 0 ||
+        this.value === null ||
+        this.value.length === 0
+      ) {
+        search__results.innerHTML = "";
       }
     }
 
