@@ -175,7 +175,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const onFocusOut = (event) => {
     event.target.value = "";
-    clearData();
   };
 
   const clearData = () => {
@@ -241,8 +240,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnClose = document.getElementById("btn__close");
   const btnMobileOpen = document.getElementById("btn__mobile_open");
   const btnMobileClose = document.getElementById("btn__mobile_close");
-
-  let navOpen = false;
 
   const onClick_news = document.getElementById("display__onClick_news");
   const onClick_about = document.getElementById("display__onClick_about");
