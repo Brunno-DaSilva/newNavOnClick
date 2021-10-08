@@ -930,6 +930,13 @@ body .sm-screen_search {
   display: none;
 }
 
+body .NO_DATA_FOUND {
+  color: var(--light-blue);
+}
+body .NO_DATA_FOUND a {
+  color: var(--OffWhite);
+  border-bottom: 2px solid red;
+}
 /*******************************************************
 =====================================
 ==>        Media Queries
