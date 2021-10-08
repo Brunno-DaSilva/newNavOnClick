@@ -69,7 +69,6 @@ document.addEventListener("DOMContentLoaded", () => {
       .then((response) => response.json())
       .then((data) => {
         searchTermsArr.push(...data);
-        console.log("searchTermsArr:", searchTermsArr);
         init();
       })
       .catch((error) => {
@@ -115,9 +114,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         searchBar.addEventListener("keypress", function (e) {
           if (e.key === "Enter") {
-            window.location.href = `${urlFISD}`;
+            window.location.href = `${urlFISD} ${this.value}`;
           }
         });
+
         search__results.innerHTML = `
         <li tabindex="-1" class="character">
               <a 
@@ -127,6 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </li>`;
       }
     }
+
     searchBar.addEventListener("input", displayMatches);
   }
 
@@ -175,6 +176,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const onFocusOut = (event) => {
     event.target.value = "";
+
+    search__results.reset();
   };
 
   const clearData = () => {
