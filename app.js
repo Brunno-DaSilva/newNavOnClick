@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
         this.value === "" ||
         this.value == 0 ||
         this.value === null ||
-        this.value.length === 0
+        this.value.length <= 1
       ) {
         search__results.innerHTML = "";
       }
