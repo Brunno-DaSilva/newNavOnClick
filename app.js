@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
         this.value === "" ||
         this.value == 0 ||
         this.value === null ||
-        this.value.length === 0
+        this.value.length <= 1
       ) {
         search__results.innerHTML = "";
       }
@@ -162,23 +162,18 @@ document.addEventListener("DOMContentLoaded", () => {
       matches = [];
       search__results.innerHTML = "";
     }
-<<<<<<< HEAD
-    if (searchText.length <= 1) {
-      matches = [];
-      search__results.innerHTML = "";
-    }
-=======
-
->>>>>>> d39f6b329d52e74baa80ba064fb8fcd88b1f03a0
     displayDataHTML(matches);
   };*/
 
   // show data to HTML page
-<<<<<<< HEAD
+
   /* const displayDataHTML = (matches) => {
 =======
   const displayDataHTML = (matches) => {
 >>>>>>> d39f6b329d52e74baa80ba064fb8fcd88b1f03a0
+=======
+  /*const displayDataHTML = (matches) => {
+>>>>>>> 0e0d8bf7850901257a7b59b7f25310867454f6fc
     if (matches.length > 2) {
       const url = `https://www.friscoisd.org/sc/`;
 
@@ -194,8 +189,6 @@ document.addEventListener("DOMContentLoaded", () => {
       search__results.innerHTML = htmlData;
     }
   };*/
-
-  //[ x ] Clear form and match results
 
   const onFocusOut = (event) => {
     event.target.value = "";
