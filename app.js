@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /*********************************************
    *
-   * Search Icons
+   * Search Icon
    *
    * ********************************************/
 
@@ -139,53 +139,10 @@ document.addEventListener("DOMContentLoaded", () => {
     searchBar.addEventListener("input", displayMatches);
   }
 
-  /*const searchStates = async (searchText) => {
-    const res = await fetch(
-      "https://www.friscoisd.org/searchData/searchTerms.json"
-    );
-    const states = await res.json();
-
-    // Get match to current text input
-
-    let matches = states.filter((state) => {
-      const regex = new RegExp(searchText, "gi");
-
-      return state.t.match(regex) || state.u.match(regex);
-    });
-
-    if (searchText.length === 0) {
-      console.log("MATCHS IF");
-      matches = [];
-      search__results.innerHTML = "";
-    }
-    if (searchText.length < 2) {
-      matches = [];
-      search__results.innerHTML = "";
-    }
-
-    displayDataHTML(matches);
-  };*/
-
-  // show data to HTML page
-  /*const displayDataHTML = (matches) => {
-    if (matches.length > 2) {
-      const url = `https://www.friscoisd.org/sc/`;
-
-      const htmlData = matches
-        .map((match) => {
-          return `
-            <li tabindex="-1" class="character">
-                <a tabindex="0" class="search__link" href="${url}${match.u}" >${match.t}</a>
-            </li>
-        `;
-        })
-        .join("");
-      search__results.innerHTML = htmlData;
-    }
-  };*/
-
   const onFocusOut = (event) => {
     event.target.value = "";
+
+    search__results.reset();
   };
 
   const clearData = () => {
@@ -193,8 +150,6 @@ document.addEventListener("DOMContentLoaded", () => {
     matches = [];
   };
 
-  //[ x ] Clear form and match results
-  searchBar.addEventListener("input", () => searchStates(searchBar.value));
   header.addEventListener("focusout", onFocusOut);
 
   search__results.addEventListener("click", function (e) {
@@ -251,8 +206,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnClose = document.getElementById("btn__close");
   const btnMobileOpen = document.getElementById("btn__mobile_open");
   const btnMobileClose = document.getElementById("btn__mobile_close");
-
-  let navOpen = false;
 
   const onClick_news = document.getElementById("display__onClick_news");
   const onClick_about = document.getElementById("display__onClick_about");
