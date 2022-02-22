@@ -5,8 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
    *
    * Inner School tab
    *
-   * ********************************************/
-
+   *********************************************/
   function onTabClick(event) {
     let activeTabs = document.querySelectorAll(".active");
 
@@ -69,6 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .then((response) => response.json())
       .then((data) => {
         searchTermsArr.push(...data);
+        console.log(searchTermsArr);
         init();
       })
       .catch((error) => {
@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const onFocusOut = (event) => {
     event.target.value = "";
 
-    search__results.reset();
+    // search__results.reset();
   };
 
   const clearData = () => {

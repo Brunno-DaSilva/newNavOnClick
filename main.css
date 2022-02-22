@@ -10,15 +10,19 @@ TODOs
 ******************************************************/
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
 
 :root {
   --dark-blue: #184366;
   --light-green: #0e987d;
-  --light-blue: #5ab3c4;
-  --yellow: #e8b20f;
-  --orange: #e95b37;
-  --OffWhite: #f8f8f8;
+  --light-blue-accent: #5ab3c4;
+  --yellow-accent: #e8b20f;
+  --orange-accent: #e95b37;
+  --foreground: #626874;
+  --off-white: #f8f8f8;
+  --font-robot: "Roboto", sans-serif;
+  --transition: ease-in-out 0.4s;
+  --radius: 0.25rem;
+  --border: 1px solid #e95b37;
 }
 
 *,
@@ -71,7 +75,7 @@ body header {
   -ms-flex-align: center;
   align-items: center;
   background: var(--dark-blue);
-  border-bottom: 2px solid var(--yellow);
+  border-bottom: 2px solid var(--yellow-accent);
   -webkit-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3),
     0 15px 12px rgba(0, 0, 0, 0.22);
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
@@ -133,7 +137,7 @@ body header .navigation .nav .nav__primary-item .display__onHover,
   position: absolute;
   top: 120%;
   padding: 0.9rem;
-  background-color: var(--OffWhite);
+  background-color: var(--off-white);
   border-radius: 0.25rem;
   z-index: 900;
   display: none;
@@ -231,7 +235,7 @@ body header .navigation .nav .about .show_about .button:hover {
 
 body header .navigation .nav .about .show_about .button__orange {
   background-color: #af4429;
-  color: var(--OffWhite) !important;
+  color: var(--off-white) !important;
 }
 
 body header .navigation .nav .about .show_about .button__yellow {
@@ -321,7 +325,7 @@ body
   .about__column_right
   .button__yellow {
   text-transform: uppercase;
-  color: var(--OffWhite) !important;
+  color: var(--off-white) !important;
   font-weight: bolder;
 }
 
@@ -362,7 +366,7 @@ body header .navigation .nav .schools .show_schools .schooltab__container {
   width: 98%;
   min-height: 400px;
   /* margin: 0 auto; */
-  background-color: var(--OffWhite);
+  background-color: var(--off-white);
   color: var(--dark-blue) !important;
 }
 
@@ -429,7 +433,7 @@ body
   transition: all 0.3s ease-in-out;
   color: var(--dark-blue) !important;
   font-weight: 600;
-  border-bottom: 3px solid var(--yellow);
+  border-bottom: 3px solid var(--yellow-accent);
 }
 
 .close {
@@ -457,7 +461,7 @@ body
 }
 .close:hover,
 .close__mb:hover {
-  color: var(--orange);
+  color: var(--orange-accent);
 }
 
 body
@@ -727,7 +731,7 @@ body header .navigation .icons {
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end;
-  color: var(--yellow);
+  color: var(--yellow-accent);
   position: relative;
 }
 
@@ -760,7 +764,7 @@ body header .navigation .icons .icons__search .trigger_search {
   font-size: 1.2rem;
 }
 body header .navigation .icons .icons__search .trigger_search:hover {
-  color: var(--yellow);
+  color: var(--yellow-accent);
 }
 
 body header .navigation .icons .icons__search .input {
@@ -790,7 +794,7 @@ body header .navigation .icons .input-open::placeholder {
 
 body header .navigation .icons .icons__search .anchor {
   padding: 0 1rem;
-  color: var(--OffWhite);
+  color: var(--off-white);
   font-size: 1.2rem;
   -webkit-transition: ease-in-out 0.3s;
   transition: ease-in-out 0.3s;
@@ -808,7 +812,7 @@ body header .navigation .icons .icons__search .anchor {
 }
 
 body header .navigation .icons .icons__search a:hover {
-  color: var(--yellow);
+  color: var(--yellow-accent);
 }
 
 body .animation__underline {
@@ -823,7 +827,7 @@ body .animation__underline {
 }
 .hover_nav_item:hover {
   cursor: pointer;
-  color: var(--yellow);
+  color: var(--yellow-accent);
 }
 
 body .animation__underline:hover {
@@ -840,7 +844,7 @@ body .animation__underline:after {
   border-radius: 0.5rem;
   left: 50%;
   position: absolute;
-  background: var(--yellow);
+  background: var(--yellow-accent);
   -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
@@ -857,7 +861,7 @@ body .padding-bottom {
 }
 
 body .nav_white_text {
-  color: var(--OffWhite);
+  color: var(--off-white);
   text-decoration: none !important;
   text-transform: uppercase;
   font-size: 1.1rem;
@@ -882,7 +886,7 @@ body .arrow-up__employment {
   height: 0;
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
-  border-bottom: 15px solid var(--OffWhite);
+  border-bottom: 15px solid var(--off-white);
   position: absolute;
   left: 42.5%;
   top: -2%;
@@ -1221,14 +1225,14 @@ body .sm-screen_search {
     position: absolute;
     background-color: transparent;
     font-size: 2.5rem !important;
-    color: var(--OffWhite);
+    color: var(--off-white);
     z-index: 999;
     transition: ease-in-out 0.4s;
   }
 
   .close__mb button:hover {
     cursor: pointer;
-    color: var(--orange);
+    color: var(--orange-accent);
   }
 
   .show {
@@ -1974,7 +1978,7 @@ body .sm-screen_search {
     padding: 0.5rem 0.2rem !important;
   }
   footer .main_footer__address .footer__address p i {
-    color: var(--light-blue);
+    color: var(--light-blue-accent);
   }
   footer .main_footer__copyright p {
     margin-right: 0rem !important;
