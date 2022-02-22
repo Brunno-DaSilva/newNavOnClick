@@ -1,10 +1,15 @@
 :root {
   --dark-blue: #184366;
   --light-green: #0e987d;
-  --light-blue: #5ab3c4;
-  --yellow: #e8b20f;
-  --orange: #e95b37;
-  --OffWhite: #f8f8f8;
+  --light-blue-accent: #5ab3c4;
+  --yellow-accent: #e8b20f;
+  --orange-accent: #e95b37;
+  --foreground: #626874;
+  --off-white: #f8f8f8;
+  --font-robot: "Roboto", sans-serif;
+  --transition: ease-in-out 0.4s;
+  --radius: 0.25rem;
+  --border: 1px solid #e95b37;
 }
 
 #search__results_container {
@@ -26,7 +31,7 @@
 }
 #search__results li a {
   font-size: 1.2rem;
-  color: var(--OffWhite);
+  color: var(--off-white);
 }
 
 .character {
@@ -46,13 +51,13 @@
 }
 .character a:hover {
   cursor: pointer;
-  color: var(--yellow) !important;
+  color: var(--yellow-accent) !important;
 }
 
 .search__link {
   list-style: none;
   text-decoration: none;
-  color: var(--OffWhite);
+  color: var(--off-white);
 }
 
 .displayNone {
